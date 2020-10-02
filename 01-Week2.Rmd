@@ -1,0 +1,19 @@
+# Lab Session 1 {#Week2}
+
+## Learning Objectives
+
+In this week's Lab session we will introduce you to some basic features of R. This will allow you to write your first basic scripts. By the end of this Lab session you should have a clear understanding of the following concepts:
+   
+* **Variables**   
+* **Operators**   
+* **Difference between script and console**  
+    
+## Getting Things Ready   
+   
+Ideally, we would like you to have your SP300 work organised. This will make your work easier to maintain but also help us to aid you when you get stuck. Therefore, we recommend creating a folder on your desktop called "SP300". Inside that folder you should be creating a new project every week with week's name. This will make it much easier for you to navigate back and forth from week to week and look at different aspects of your work. Before you proceed with the following steps make sure you have created a folder named "SP300" on your "Desktop" folder.  
+    
+## Starting with RStudio  
+Run RStudio and create a new project by clicking on File >> New Project ... .Then select New Directory and then New Project. Enter a Directory name. As mentioned above we recommend naming the folder "Week 2" and by clicking Browse make sure you place that folder in your "SP300" folder that you created on your Desktop.Click "Create Project" to finalise creating your new project.  
+
+You should now be seeing **three main windows**, three **Console**, the **Environment**, and the **Files**. 
+  
