@@ -1,0 +1,11 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Lab Session 2 {#Week3}
+
+## Learning Objectives
+
+
+In this week's lab session we will start working on some basic concepts of statistical exploration of data. One of the first steps we take as Psychologists when we want to analyse our data, is first to get a "feel" or gist if you want oh how are data is *distributed*. 
