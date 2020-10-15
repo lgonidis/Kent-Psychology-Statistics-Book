@@ -1,0 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Lab Session 3 {#Week4}
+
+## Learning Objectives
