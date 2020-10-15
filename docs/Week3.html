@@ -24,7 +24,7 @@
 <meta name="author" content="Lazaros Gonidis" />
 
 
-<meta name="date" content="2020-10-07" />
+<meta name="date" content="2020-10-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="Week2.html"/>
-
+<link rel="next" href="Week4.html"/>
 <script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -154,6 +154,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.4" data-path="Week3.html"><a href="Week3.html#frequency-tables-in-r-and-histograms"><i class="fa fa-check"></i><b>3.4</b> Frequency tables in R and Histograms</a></li>
 <li class="chapter" data-level="3.5" data-path="Week2.html"><a href="Week2.html#exercise"><i class="fa fa-check"></i><b>3.5</b> Exercise</a></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="Week4.html"><a href="Week4.html"><i class="fa fa-check"></i><b>4</b> Lab Session 3</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="Week2.html"><a href="Week2.html#learning-objectives"><i class="fa fa-check"></i><b>4.1</b> Learning Objectives</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -243,7 +247,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb7-3"><a href="Week3.html#cb7-3"></a>numbers &lt;-<span class="st"> </span><span class="kw">sample.int</span>(<span class="dv">10</span>, <span class="dv">5</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
 <span id="cb7-4"><a href="Week3.html#cb7-4"></a></span>
 <span id="cb7-5"><a href="Week3.html#cb7-5"></a>numbers</span></code></pre></div>
-<p>[1] 3 10 2 5 9</p>
+<p>[1] 5 10 6 9 1</p>
 <p>As mentioned above, I used a function called <strong>sample.int()</strong>. A <strong>function</strong> in R, is a mechanism that can perform a task. In this case our function can select an integer number randomly. A function also includes two brackets (). Within these brackets we can specify our own arguments in order to be clear what we want R to do for us when this function is used.</p>
 <p>Notice the number 10, this <strong>argument</strong> instructs our function that we want to pick randomly a number between 1 and 10.</p>
 <p>Notice the second number 5, this <strong>argument</strong> instructs our function to give 5 such numbers from 1 to 10.</p>
@@ -257,14 +261,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-3"><a href="Week3.html#cb8-3"></a><span class="co"># See how my arguments have now changed.</span></span>
 <span id="cb8-4"><a href="Week3.html#cb8-4"></a>numbers &lt;-<span class="st"> </span><span class="kw">sample.int</span>(<span class="dv">50</span>, <span class="dv">200</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
 <span id="cb8-5"><a href="Week3.html#cb8-5"></a>numbers</span></code></pre></div>
-<p>[1] 49 6 42 13 16 9 10 10 50 6 18 13 27 34 26 4 1 34 49 19 25 20 36 45 15
-[26] 46 38 17 11 20 20 7 20 39 44 29 22 47 21 13 17 16 31 33 41 3 30 43 48 39
-[51] 10 37 6 30 19 18 50 40 10 44 25 26 14 43 46 31 41 25 14 6 42 40 16 29 27
-[76] 28 32 13 2 22 30 49 16 26 47 11 3 26 3 28 5 16 18 13 47 35 24 20 28 43
-[101] 30 31 6 38 4 7 40 41 2 15 4 20 24 27 6 34 23 11 47 2 27 23 26 47 27
-[126] 21 43 45 45 13 24 36 13 40 8 47 19 43 11 37 10 4 50 27 28 29 4 36 12 37
-[151] 5 14 18 45 41 49 12 37 45 26 14 7 29 7 44 12 3 27 4 19 47 49 48 27 8
-[176] 41 30 8 32 49 17 41 3 7 35 15 31 17 9 36 14 31 7 17 21 17 16 7 25 5</p>
+<p>[1] 49 43 17 13 37 42 26 29 24 19 34 31 18 38 1 5 9 8 22 45 37 17 10 1 30
+[26] 11 12 11 1 26 28 42 26 12 48 44 17 37 37 9 9 50 20 37 49 15 48 50 43 38
+[51] 49 10 22 6 22 22 14 31 41 2 29 38 31 18 20 22 14 9 6 11 34 39 31 10 31
+[76] 18 36 2 29 9 47 50 11 25 2 21 29 42 15 16 37 8 3 15 33 27 36 29 9 29
+[101] 39 29 26 10 45 5 28 1 47 12 25 37 9 42 34 31 2 25 7 27 16 39 26 9 7
+[126] 50 45 16 16 35 49 15 21 32 2 39 47 42 49 8 4 5 3 14 8 3 4 12 49 9
+[151] 24 20 30 50 17 29 13 19 42 12 33 33 21 32 2 27 16 2 27 32 24 42 48 42 16
+[176] 7 1 13 35 13 13 10 16 37 1 35 18 23 19 19 23 43 31 14 28 4 50 49 41 5</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="Week3.html#cb9-1"></a><span class="co"># Now we will call a new function to help us group our data.</span></span>
 <span id="cb9-2"><a href="Week3.html#cb9-2"></a><span class="co"># First put them in 5 groups. The numbers in c() declare the numbers that define each group.</span></span>
 <span id="cb9-3"><a href="Week3.html#cb9-3"></a></span>
@@ -273,7 +277,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb9-6"><a href="Week3.html#cb9-6"></a><span class="co"># Now I can produce my frequency table using another function</span></span>
 <span id="cb9-7"><a href="Week3.html#cb9-7"></a><span class="kw">summary</span>(groups)</span></code></pre></div>
 <p>(0,10] (10,20] (20,30] (30,40] (40,50]
-41 48 41 29 41</p>
+46 44 38 36 36</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="Week3.html#cb10-1"></a><span class="co"># We will now use a new function called hist that creates histograms.</span></span>
 <span id="cb10-2"><a href="Week3.html#cb10-2"></a><span class="co"># Note that this function has to work with the original numbers</span></span>
 <span id="cb10-3"><a href="Week3.html#cb10-3"></a><span class="co"># and not with the groups.</span></span>
@@ -300,8 +304,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="Week2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="Week2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="Week4.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
