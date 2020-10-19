@@ -160,7 +160,7 @@ data(iris)
 hist(iris$Sepal.Length)
 hist(iris$Sepal.Width)
 hist(iris$Petal.Length)
-hist(iris$Sepal.Width)
+hist(iris$Petal.Width)
 ```
 
 **Exercise 4**
@@ -168,11 +168,11 @@ hist(iris$Sepal.Width)
 mean(iris$Sepal.Length)
 mean(iris$Sepal.Width)
 mean(iris$Petal.Length)
-mean(iris$Sepal.Width)
+mean(iris$Petal.Width)
 median(iris$Sepal.Length)
 median(iris$Sepal.Width)
 median(iris$Petal.Length)
-median(iris$Sepal.Width)
+median(iris$Petal.Width)
 ```
 
 
@@ -182,5 +182,5 @@ library(DescTools)
 Mode(iris$Sepal.Length)
 Mode(iris$Sepal.Width)
 Mode(iris$Petal.Length)
-Mode(iris$Sepal.Width)
+Mode(iris$Petal.Width)
 ```
