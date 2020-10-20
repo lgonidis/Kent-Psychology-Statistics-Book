@@ -148,6 +148,10 @@ Let's discuss the **functions** we used:
 **Learning opportunity** from using random numbers. Run the above code many times, and each time observe the new histogram. Then discuss its **skewness** with your group mates. Does it look as **positively** or **negatively** **skewed**? Keep in mind your friends will have different graphs, so it is best to share your screen and show your histogram.
 
 
-## Exercise 2
+## Exercise 2  
+Empty  
+
+## Exercise 3
+
 
 Create a random set of 200 integers between 1 and 40. Group that data in 8 groups and produce the grouped frequency table. Then produce a histogram using these 8 groups. Spend some time to experiments with the number of bars in the histogram as well as generating new random numbers. This will allow you to become good at judging the **skewness** of a **frequency  distribution**.

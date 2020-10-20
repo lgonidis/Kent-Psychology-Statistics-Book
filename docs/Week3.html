@@ -153,6 +153,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.3" data-path="Week3.html"><a href="Week3.html#creating-vectors-with-random-numbers"><i class="fa fa-check"></i><b>3.3</b> Creating vectors with random numbers</a></li>
 <li class="chapter" data-level="3.4" data-path="Week3.html"><a href="Week3.html#frequency-tables-in-r-and-histograms"><i class="fa fa-check"></i><b>3.4</b> Frequency tables in R and Histograms</a></li>
 <li class="chapter" data-level="3.5" data-path="Week3.html"><a href="Week3.html#exercise-2"><i class="fa fa-check"></i><b>3.5</b> Exercise 2</a></li>
+<li class="chapter" data-level="3.6" data-path="Week3.html"><a href="Week3.html#exercise-3"><i class="fa fa-check"></i><b>3.6</b> Exercise 3</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="Week4.html"><a href="Week4.html"><i class="fa fa-check"></i><b>4</b> Lab Session 3</a>
 <ul>
@@ -254,7 +255,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb7-3"><a href="Week3.html#cb7-3"></a>numbers &lt;-<span class="st"> </span><span class="kw">sample.int</span>(<span class="dv">10</span>, <span class="dv">5</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
 <span id="cb7-4"><a href="Week3.html#cb7-4"></a></span>
 <span id="cb7-5"><a href="Week3.html#cb7-5"></a>numbers</span></code></pre></div>
-<p>[1] 3 4 9 4 4</p>
+<p>[1] 6 10 2 7 6</p>
 <p>As mentioned above, I used a function called <strong>sample.int()</strong>. A <strong>function</strong> in R, is a mechanism that can perform a task. In this case our function can select an integer number randomly. A function also includes two brackets (). Within these brackets we can specify our own arguments in order to be clear what we want R to do for us when this function is used.</p>
 <p>Notice the number 10, this <strong>argument</strong> instructs our function that we want to pick randomly a number between 1 and 10.</p>
 <p>Notice the second number 5, this <strong>argument</strong> instructs our function to give 5 such numbers from 1 to 10.</p>
@@ -268,14 +269,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-3"><a href="Week3.html#cb8-3"></a><span class="co"># See how my arguments have now changed.</span></span>
 <span id="cb8-4"><a href="Week3.html#cb8-4"></a>numbers &lt;-<span class="st"> </span><span class="kw">sample.int</span>(<span class="dv">50</span>, <span class="dv">200</span>, <span class="dt">replace =</span> <span class="ot">TRUE</span>)</span>
 <span id="cb8-5"><a href="Week3.html#cb8-5"></a>numbers</span></code></pre></div>
-<p>[1] 25 9 31 21 29 12 36 16 3 44 49 15 38 42 6 42 44 42 2 6 12 24 49 35 7
-[26] 17 49 43 8 28 16 1 23 8 29 45 13 23 17 15 12 27 49 48 21 13 15 36 9 1
-[51] 17 47 27 13 44 2 21 2 46 46 12 30 16 7 2 12 1 38 33 24 30 24 41 26 3
-[76] 45 36 40 34 43 3 46 50 47 35 16 26 8 30 1 8 39 31 9 43 10 48 6 43 48
-[101] 12 16 50 19 21 44 24 23 9 15 46 1 7 13 33 41 18 22 8 3 34 42 38 39 38
-[126] 18 33 19 4 45 37 28 34 38 35 49 32 25 4 47 2 23 23 31 42 7 23 31 29 23
-[151] 18 1 34 21 44 19 42 4 30 20 24 6 44 27 49 15 18 5 23 6 24 44 18 17 30
-[176] 21 31 10 48 46 46 19 2 12 33 34 4 44 26 5 25 24 26 32 16 38 39 50 28 1</p>
+<p>[1] 44 21 20 10 2 14 11 29 30 15 1 41 42 38 32 32 30 20 4 46 48 36 11 25 8
+[26] 12 49 40 29 4 43 22 30 41 22 10 33 6 36 11 48 42 12 13 40 28 33 46 6 29
+[51] 4 17 48 6 29 4 17 13 38 38 27 47 2 41 34 13 5 40 6 38 22 11 47 36 15
+[76] 30 24 5 34 3 13 17 6 37 18 13 47 13 10 37 42 7 33 5 45 44 13 25 4 38
+[101] 49 47 32 27 15 44 37 3 42 49 26 6 10 18 29 46 26 33 33 36 14 35 43 14 37
+[126] 17 12 12 33 22 19 14 42 43 49 41 35 38 49 17 11 2 27 31 47 12 5 18 41 2
+[151] 14 5 36 24 41 4 34 20 28 47 3 14 47 11 34 16 3 38 46 1 9 17 6 21 30
+[176] 13 29 19 15 43 50 27 32 41 12 2 27 43 41 23 5 30 23 34 18 42 15 9 43 50</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="Week3.html#cb9-1"></a><span class="co"># Now we will call a new function to help us group our data.</span></span>
 <span id="cb9-2"><a href="Week3.html#cb9-2"></a><span class="co"># First put them in 5 groups. The numbers in c() declare the numbers that define each group.</span></span>
 <span id="cb9-3"><a href="Week3.html#cb9-3"></a></span>
@@ -284,7 +285,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb9-6"><a href="Week3.html#cb9-6"></a><span class="co"># Now I can produce my frequency table using another function</span></span>
 <span id="cb9-7"><a href="Week3.html#cb9-7"></a><span class="kw">summary</span>(groups)</span></code></pre></div>
 <p>(0,10] (10,20] (20,30] (30,40] (40,50]
-43 36 43 33 45</p>
+38 47 33 37 45</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="Week3.html#cb10-1"></a><span class="co"># We will now use a new function called hist that creates histograms.</span></span>
 <span id="cb10-2"><a href="Week3.html#cb10-2"></a><span class="co"># Note that this function has to work with the original numbers</span></span>
 <span id="cb10-3"><a href="Week3.html#cb10-3"></a><span class="co"># and not with the groups.</span></span>
@@ -302,6 +303,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="exercise-2" class="section level2" number="3.5">
 <h2><span class="header-section-number">3.5</span> Exercise 2</h2>
+<p>Empty</p>
+</div>
+<div id="exercise-3" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Exercise 3</h2>
 <p>Create a random set of 200 integers between 1 and 40. Group that data in 8 groups and produce the grouped frequency table. Then produce a histogram using these 8 groups. Spend some time to experiments with the number of bars in the histogram as well as generating new random numbers. This will allow you to become good at judging the <strong>skewness</strong> of a <strong>frequency distribution</strong>.</p>
 
 </div>
