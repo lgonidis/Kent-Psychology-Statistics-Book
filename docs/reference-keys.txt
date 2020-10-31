@@ -14,6 +14,7 @@ vectors
 creating-vectors-with-random-numbers
 frequency-tables-in-r-and-histograms
 exercise-2
+exercise-3
 Week4
 what-we-have-learnt-so-far
 learning-objectives-2
@@ -23,4 +24,16 @@ adding-a-new-package
 to-sum-up
 additional-exercises-spoiler-alert-if-you-get-stuck-the-answers-are-at-the-end-of-the-pdf
 solutions-spoiler-alert
-exercise-3
+Week6
+what-we-have-learnt-so-far-1
+learning-objectives-3
+lets-get-started-1
+range-interquartile-range-median-and-relevant-plots
+exploring-data-using-boxplots
+exploring-data-using-barcharts
+exercises
+exercise-1
+exercise-2-1
+exercise-3-1
+exercise-4
+exercise-5

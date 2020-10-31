@@ -1,13 +1,12 @@
 --- 
-title: "The Course Book for SP300 Kent Psychology Statistics"
+title: "R and RStudio for Psychologists"
 author: "Lazaros Gonidis"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
-bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "This is a work in progress of The Course Book for SP300 Kent Psychology Statistics. "
+description: "This is a work in progress so make sure you access it online and do not rely on the pdf. "
 ---
 
 # Prerequisites
