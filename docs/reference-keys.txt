@@ -24,6 +24,7 @@ adding-a-new-package
 to-sum-up
 additional-exercises-spoiler-alert-if-you-get-stuck-the-answers-are-at-the-end-of-the-pdf
 solutions-spoiler-alert
+Week5
 Week6
 what-we-have-learnt-so-far-1
 learning-objectives-3
