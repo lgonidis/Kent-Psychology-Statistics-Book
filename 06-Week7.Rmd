@@ -142,7 +142,7 @@ att1,att2,att3,bel1,bel2,bel3,bel4,stance1,stance2,stance3,stance4,ethic1,ethic2
 
 1. att_mean: att1, att2, att3  
 2. bel_mean: bel1, bel2, bel3, bel4
-3. stance_mean: bel1, bel2, bel3, bel4  
+3. stance_mean: stance1,stance2,stance3,stance4  
 4. ethic_mean: ethic1, ethic2, ethic3  
 
 Then explore correlations by creating scatterplots for the above four variables.  
