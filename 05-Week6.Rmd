@@ -36,10 +36,14 @@ Even though this dataset is not the result of Psychological research it does hav
  
  
 ## Range, Interquartile Range, Median, and Relevant Plots
-
+```{r message=FALSE, warning=FALSE, r,echo=FALSE}
+# Set so that long lines in R will be wrapped:
+knitr::opts_chunk$set(tidy.opts=list(width.cutoff=80), tidy=TRUE)
+```
+   
 
 In your new script type and run the following:  
-```{r include=FALSE}
+```{r echo=TRUE, message=TRUE, warning=FALSE}
 library(tidyverse)
 library(ggpubr)
 data("ToothGrowth")
@@ -139,7 +143,7 @@ ggbarplot(ToothGrowth$len)
 ```
    
 
-This is a very basic version of a brachart that just includes all our DV measurements. Ideally we would want to see the mean of our DV for each level of an IV. For example the mean of len per level of dose.
+This is a very basic version of a barchart that just includes all our DV measurements. Ideally we would want to see the mean of our DV for each level of an IV. For example the mean of len per level of dose.
 
 ```{r}
 ggbarplot(ToothGrowth, x="dose", y = "len")
@@ -169,7 +173,8 @@ ggbarplot(ToothGrowth, x="dose", y = "len", fill = "supp", add = "mean_sd")
 This does not really look great. This is because ggbarplot dre each bar on top of each other. We want them next to each other. We need to add an argument that will move the bars next to each other.
 
 ```{r}
-ggbarplot(ToothGrowth, x="dose", y = "len", fill = "supp", position = position_dodge(0.7) , add = "mean_sd")
+ggbarplot(ToothGrowth, x="dose", y = "len", fill = "supp", 
+          position = position_dodge(0.7) , add = "mean_sd")
 ```
 
 Both ggboxplot andd ggbarplot come numerous more arguments. Remember to use the help function or google them to see what other option you have. We will also using them a lot in the coming weeks so we will learn quite a few more arguments.
