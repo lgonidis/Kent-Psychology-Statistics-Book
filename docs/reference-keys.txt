@@ -45,3 +45,6 @@ load-our-own-data
 working-with-our-data
 creating-a-new-dataset-and-executing-all-correlations-at-once
 exercise-6
+Week8
+learning-objectives-5
+to-start-with

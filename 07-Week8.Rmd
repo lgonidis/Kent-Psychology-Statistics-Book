@@ -1,0 +1,24 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Lab Session 6 {#Week8}
+
+## Learning Objectives
+In this week's session we will be focusing on working with existing code and fixing mistakes as we go along.
+This is a crucial lab session and you should do your best to work on your own. You can very briefly chat with your lab mates but try to ask for minimal help from our teaching assistants, not at all if possible. We will go through the answer tomorrow in the Drop-In session.  
+
+## To start with 
+First, start RStudio and create a new project. Your project should be named "Week 8 lab"
+
+Go on moodle in week 8 in the lab session and download two files.  
+1. "many many many errors.csv"   
+2. "many many many errors.R"  
+
+Make sure you save both files in the folder you just created for your new project.  
+Once you have that then load the R script and start working through the instructions that are included in the script as comments.
+In order to load the script go to File > Open File then select the "many many many errors.R" file and click on Open.  
+
+As you work through the file, keep an eye for typing mistakes, packages that we have not loaded, variables that are mistyped, dataframes that are not declared. Also, functions that do not give you an error but do not do what you want if you do not typed them correctly (remember mode vs Mode a few weeks ago).
+
