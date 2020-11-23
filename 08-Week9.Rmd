@@ -1,0 +1,130 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Lab Session 7 {#Week9}
+
+## Learning Objectives
+In this week's session we will be focusing on some "guess work". You will be given a partial script and some graphs. Your task will be to complete the code in order to produce the end-graphs on your own.
+  
+
+## To start with. (You need to do the following steps before coming to the lab)
+First, start RStudio and create a new project. Your project should be named "Week 9 lab"
+
+Go on moodle in week 9 in the lab session and download two files.  
+1. "week9data.csv"   
+2. "week9script.R"  
+
+Make sure you save both files in the folder you just created for your new project.  
+Once you have that then load the R script and execute **only the first 6 lines**.
+In order to load the script go to File > Open File then select the "week9script.R" file and click on Open. If you can see the dataframe **df9** in your environment then you are all set to do the rest of the work in the lab.
+
+
+## Lab task. The following tasks have to be completed in the lab   
+### Part 1: Histograms
+
+Go through your scripts now and try to complete the missing code in order to get the following graphs:
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+## start of prep work
+library(tidyverse)
+library(ggpubr)
+
+df9 <- read_csv("week9data.csv")
+## end of preparation
+
+
+## start of lab work
+## compute the three averages of day, session, and task
+## the following three lines of code are incomplete
+## you will have to complete them on your own
+
+df9 <- mutate(df9, day = (day1 + day2 + day3 + day4 + day5)/5)
+
+
+df9 <- mutate(df9, session = (session1 + session2 + session3 + session4)/4)
+
+
+df9 <- mutate(df9, task = (task1 + task2 + task3 + task4 + task5)/5 )
+
+
+
+## in the next three lines amend the code to give the histograms
+## exactly as they look in the given graph
+## remember you maybe need to convert a variable to factor first
+
+df9$group <- as.factor(df9$group)
+
+gghistogram(df9, x = "day", bins = 8, 
+            color = "group", fill = "group",
+            add = "mean", 
+            add.params = list(linetype = "solid", color = "group"),
+            title = "Histograms per Group",
+            xlab = "Day Performance",
+            ylab = "Number of Participants")
+
+
+gghistogram(df9, x = "session", bins = 5, 
+            color = "group", fill = "group",
+            add = "mean", 
+            add.params = list(linetype = "solid", color = "group"),
+            title = "Histograms per Group",
+            xlab = "Session Performance",
+            ylab = "Number of Participants")
+
+gghistogram(df9, x = "task", bins = 12, 
+            color = "group", fill = "group",
+            add = "mean", 
+            add.params = list(linetype = "solid", color = "group"),
+            title = "Histograms per Group",
+            xlab = "Task Performance",
+            ylab = "Number of Participants")
+
+```
+
+### Part 2: Scatterplots
+
+Now continue to the scatterplots
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+p1 <- ggscatter(df9, x = "day", y = "session",
+          title = "Scatterplot of Day by Session",
+          xlab = "Day Performance",
+          ylab = "Session Performance",
+          cor.coef = TRUE) 
+p1 + 
+  font("title", size = 14, color = "red", face = "bold.italic") +
+  font("xlab", size = 10, color = "orange") 
+```
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+p2 <- ggscatter(df9, x = "day", y = "task",
+                title = "Scatterplot of Day by Task",
+                xlab = "Day Performance",
+                ylab = "Task Performance",
+                cor.coef = TRUE) 
+p2 + 
+  font("title", size = 14, color = "blue", face = "bold") +
+  font("xlab", size = 12, color = "green") +
+  font("ylab", size = 12, color = "red") + 
+  font("xy.text", size = 16, color = "gray", face = "bold")
+
+
+```
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+p3 <- ggscatter(df9, x = "task", y = "session",
+                title = "Scatterplot of Task by Session",
+                xlab = "Task Performance",
+                ylab = "Session Performance",
+                cor.coef = TRUE) 
+p2 + 
+  font("title", size = 14, color = "red", face = "bold") +
+  font("xlab", size = 14, color = "blue") +
+  font("ylab", size = 14, color = "blue") + 
+  font("xy.text", size = 14, color = "red", face = "bold")
+
+
+```
+

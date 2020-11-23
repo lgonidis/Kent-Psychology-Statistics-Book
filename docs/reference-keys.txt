@@ -48,3 +48,9 @@ exercise-6
 Week8
 learning-objectives-5
 to-start-with
+Week9
+learning-objectives-6
+to-start-with.-you-need-to-do-the-following-steps-before-coming-to-the-lab
+lab-task.-the-following-tasks-have-to-be-completed-in-the-lab
+part-1-histograms
+part-2-scatterplots
