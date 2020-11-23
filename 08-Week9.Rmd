@@ -119,7 +119,7 @@ p3 <- ggscatter(df9, x = "task", y = "session",
                 xlab = "Task Performance",
                 ylab = "Session Performance",
                 cor.coef = TRUE) 
-p2 + 
+p3 + 
   font("title", size = 14, color = "red", face = "bold") +
   font("xlab", size = 14, color = "blue") +
   font("ylab", size = 14, color = "blue") + 
