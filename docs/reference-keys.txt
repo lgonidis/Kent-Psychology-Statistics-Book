@@ -73,4 +73,5 @@ test-performance-test_result
 programming-skills-skills
 create-a-new-dataframe-that-will-only-contain-your-4-variables
 analysis-needed-for-your-report
+note-for-all-histograms-and-scatterplots-we-expect-to-see-clear-titles-x-and-y-axes-labels-and-legends.-so-make-sure-you-format-them-correctly-according-to-apa-but-also-include-the-expected-content.
 wrapping-up
