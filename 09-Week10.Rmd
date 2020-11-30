@@ -158,10 +158,10 @@ For your report you will need many different components that will go in differen
 
 Furthermore, you will need to carry out the correlational analysis and include the following:  
 
-1. All correlation coeeficients between all your four variable as well as the *p-values*. hese should be reported in a table that will be formatted according to the American Psychological Association guidelines (APA 7). This should go in your results section
+1. All correlation coefficients between all your four variable as well as the *p-values*. hese should be reported in a table that will be formatted according to the American Psychological Association guidelines (APA 7). This should go in your results section
 2.  We also want to see the scatterplots for all variable combinations (the four you chose). These should go in the Appendices. 
 
-**NOTE: For all histograms and scatterplots we expect to see clear titles, x and y-axes labes, and legends. So make sure you format them correctly (according to APA) but also include the expected content.
+**NOTE: For all histograms and scatterplots we expect to see clear titles, x and y-axes labels, and legends. So make sure you format them correctly (according to APA) but also include the expected content.
 
 
 
