@@ -1,0 +1,119 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+# SP300 Project A: Continuing ... {#Week11}
+
+
+## Your assignment (Deadline 18/12/2020 noon)
+
+You will have to investigate for associations between **Maths Anxiety**, **Testing Anxiety**, and **two other constructs** of your choice from the list below. Which one is entirely up to you. However, make sure you link the four in your introduction so that your hypothesis and rationale behind the study are sound.  
+
+You will have to produce a group report of 2,000 words (maximum). In this word count the references and the appendices are not included. In other words, the word count includes everything you have written from the abstract until the end of your discussion. This limit is the absolute maximum, which means you cannot go above it, you can however write below 2,000 words.  
+
+On Moodle, there is a template file that you will have to use to write the report. You have to use that file as we want you to also fill in the first pages of the report. In these pages all group members will be listed and you will have to acknowledge all the members that actually attended and contributed. This is crucial as we want to be fair and only award students who have worked on the project.
+
+
+
+## Psychological constructs in our study  
+
+For the purposes of this report you will only need to work and analyse four variables. Two of them are compulsory, these are **Maths Anxiety** and  **Testing Anxiety**. From the following list you can choose any other two you want. You have to have a total of **four** variables in your work.  
+
+1. **Maths Anxiety**  
+2. **Testing Anxiety** 
+3. Computer Programming Anxiety  
+4. Studying Efforts  
+5. Programming experience (experience)
+6. Programming Progress (happy)
+7. Test Progress  (tests)
+8. Test Preparation  (test_hours)
+9. Test Perseverance  (test_attempts)
+10. Test Performance  (test_result)
+11. Programming Skills (skills)
+
+
+
+
+
+## Week 11 Session
+
+Continuing from last week you should be working on the report data. Today we will focus specifically on a technique called **reverse coding**. This technique is crucial for the groups that chose **Computer Programming Anxiety (CPAQ)** or **Computer Programming Anxiety (CPAQ) Prior to joing our course**. Even if your group has not chosen the above two variables you should complete today's lab as this topic may well be in the upcoming statistics in-class test.
+
+
+## What is reverse coding?  
+When coding and analysing questions from a questionnaire it is vital that all our questions have the same direction prior to the analysis. What do we mean by that? Have a look at the following two example statements:  
+1. I find statistics easy (1: strongly disagree - 5: strongly agree)  
+2. Statistics are challenging for me (1: strongly disagree - 5: strongly agree)    
+It is clear from the working that these two statements are expressing two opposites (easy stats vs challenging stats). However, the answering scale has the same direction. This could create problems for our analysis. Lets see an example to better illustrate this. Lets us imagine a student who finds statistics **easy**. This means they would choose 4 for the first question would most probably choose 2 in the second question. If we calculate the mean as is we would get a mean of 3 which would not represent that individual's disposition of finding statistics easy. Instead it would place them at the center which prepresents finding statistics neither easy or difficult.  
+
+## So how do we deal with this?
+In order to avoid such issues we reverse code the questions that do not follow the direction that the rest of the questions are following. This is more clear if we see some of the items from the **Computer Programming Anxiety (CPAQ)**. This questionnaire is comprised of 4 sub_scales that are not always coded for the same direction. We will have to fix that before calculating the overall questionnaire score. Below we will only include information for the CPAQ but you will have to follow a similar approach for the CPAQ Prior to joining.
+
+### Computer Programming Anxiety (CPAQ) (Brief Version)
+This brief version of the questionnaire is comprised of 15 items. The full version of the questionnaire is much longer. However, for the purposes of our coursework this brief versions will be more than suitable. These 15 items are:   
+1. GICS_1 to GIS_4 (Gaining Initial Computing Skills, GICS).   
+2. SoC_1 to SoC_3 (Sense of Control, SOC).   
+3. CSC_1 to CSC_4 (Computer Self Concept, CSC).   
+4. SACS_1 to SACS_4 (State of Anxiety in Computer Situations, SACS). 
+
+
+**GICS**: GICS_1 to GCIS_4 are all pointing to higher anxiety for higher scores. So no action needs to be taken.  
+
+**SoC**: SoC_1 and SoC_2 indicate higher anxiety for higher score. However, SoC_3 needs to be reverse-coded as high score is associated with low anxiety. The following code should be inserted in your existing script from week 10 right after this line:
+**df <- mutate(df, GICS = (GICS_1 + GICS_2 + GICS_3 + GICS_4)/4)**. In other words the following lines are affecting your CPAQ calculations. If you did not include the CPAQ calculations then just add them straight after loading your data file.
+  
+
+```{r eval=TRUE, error = FALSE, warning=FALSE, message = FALSE, results='hide'}
+library(tidyverse) ## Do not retype if already in your script
+library(correlation) ## Do not retype if already in your script
+library(ggpubr) ## Do not retype if already in your script
+
+
+df <- read_csv("project data.csv") ## Do not retype if already in your script
+
+df <- mutate(df, GICS = (GICS_1 + GICS_2 + GICS_3 + GICS_4)/4)
+```
+
+
+
+```{r eval=TRUE, error = FALSE, warning=FALSE, message = FALSE, results='hide'}
+df <- mutate(df, SoC_3_r = 6 - SoC_3) 
+```
+
+Lets explain the code above. First we create a new variable/column called **SoC_3_r**. It is a convention to just use the original name and then add **_r** in the end so we know that this is the reverse coded item. Then we calculated the difference **6-SoC_3**. We did this because **SoC_3** has answer from 1 to 5 so if we want to reverse the order then we have to substract from 6. That way 1 will become 5, 2 will become 4, 3 will remain 3, 4 will become 2, and 5 will become 1. If our scale was 1-7 we would have to subtract from 8.
+
+You now need to recalculate the correct mean for **SoC**.
+
+```{r}
+df <- mutate(df, SOC = (SoC_1 + SoC_2 + SoC_3_r)/3)
+```
+
+Notice that I now used the **SoC_r** item and not the **SoC**. This is crucial so keep that in mind. We need to reverse code an item but also use the new item in the calculation.  
+
+
+Lets see now the rest two subscales **CSC** and **SACS**.  For **CSC** we see that items 3 and 4 need to be reversed. We will reverse them and calculate the new mean.
+
+```{r}
+df <- mutate(df, CSC_3_r = 6 - CSC_3) 
+df <- mutate(df, CSC_4_r = 6 - CSC_4)
+df <- mutate(df, CSC = (CSC_1 + CSC_2 + CSC_3_r + CSC_4_r)/4) ##make sure to use the new items
+```
+
+Looking at the SACS questionnaire we see that the second item needs reverse coding. We will do that and calculate the new mean for SACS. Keep in mind here that SACS is 1-4 scale so we will need to subtract from 5.
+
+```{r}
+df <- mutate(df, SACS_2_r = 5 - SACS_2)
+df <- mutate(df, SACS = (SACS_1 + SACS_2_r + SACS_3 + SACS_4)/4)
+
+```
+
+
+We are now ready to calculate the new overall mean for CPAQ. Once you do that then the rest of your analysis code should be the same which means all you have to do is rerun to get the updated results. This is one of the most valuable strengths of R/RStudio as it allows to make changes and correct our work without losing all of our work.
+
+```{r echo=FALSE}
+df <- mutate(df, CPAQ = (GICS + SOC + CSC + SACS)/4)
+```
+
+
+You can continue working with your analysis/results/method section work now.

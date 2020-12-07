@@ -54,7 +54,7 @@ to-start-with.-you-need-to-do-the-following-steps-before-coming-to-the-lab
 lab-task.-the-following-tasks-have-to-be-completed-in-the-lab
 part-1-histograms
 part-2-scatterplots
-sp300-project-a-relationship-between-maths-anxiety-test-anxiety-and
+Week10
 your-assignment-deadline-18122020-noon
 psychological-constructs-in-our-study
 week-10-session
@@ -73,5 +73,11 @@ test-performance-test_result
 programming-skills-skills
 create-a-new-dataframe-that-will-only-contain-your-4-variables
 analysis-needed-for-your-report
-note-for-all-histograms-and-scatterplots-we-expect-to-see-clear-titles-x-and-y-axes-labels-and-legends.-so-make-sure-you-format-them-correctly-according-to-apa-but-also-include-the-expected-content.
 wrapping-up
+Week11
+your-assignment-deadline-18122020-noon-1
+psychological-constructs-in-our-study-1
+week-11-session
+what-is-reverse-coding
+so-how-do-we-deal-with-this
+computer-programming-anxiety-cpaq-brief-version-1

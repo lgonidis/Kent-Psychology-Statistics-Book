@@ -26,7 +26,7 @@ In order to load the script go to File > Open File then select the "week9script.
 
 Go through your scripts now and try to complete the missing code in order to get the following graphs:
 
-```{r message=FALSE, warning=FALSE, echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 ## start of prep work
 library(tidyverse)
 library(ggpubr)
