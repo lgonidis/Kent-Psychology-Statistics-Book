@@ -1,14 +1,8 @@
---- 
-title: "R and RStudio for Psychologists"
-author: "Lazaros Gonidis"
-date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
-documentclass: book
-biblio-style: apalike
-link-citations: yes
-description: "This is a work in progress so make sure you access it online and do not rely on the pdf. "
 ---
-
+output:
+  pdf_document: default
+  html_document: default
+---
 # Introduction
 
 ## Aims of this introductory session
@@ -48,8 +42,6 @@ Before we wrap it up for today let us create our first basic script. We will be 
 
 ## And that is all for today
 You should still have plenty of time left. We recommend that you spend familiarising yourself with RStudio. One way to do that is to repeat all the above steps on your laptop. Another way to do that is try out different looks for RStudio. If you want to do that click on **Tools**, **Global Options**, **Appearance**. There you can select different RStudio theme, font, and Editor theme. Feel free to experiment with different looks by clicking **Apply** and then going back and choosing another **theme**. If instead you are having difficulties installing RStudio on your laptop then ask our Associate Lecturers to direct to you to our tech support.
-
-
 
 
 
