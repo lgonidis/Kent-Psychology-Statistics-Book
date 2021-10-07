@@ -102,3 +102,5 @@ week-11-session
 what-is-reverse-coding
 so-how-do-we-deal-with-this
 computer-programming-anxiety-cpaq-brief-version-1
+exercise-1-1
+exercise-2-2

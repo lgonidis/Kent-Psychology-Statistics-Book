@@ -3,7 +3,7 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Lab Session 2 {#Week10}
+# Lab Session 2 (Week 10) {-}
 
 ## Learning Objectives
 
@@ -96,10 +96,16 @@ days <- 25
 salary <- hours*hourly*days
 ```
 
-Now that you have typed all that nothing seems to be happening. This is because contrary to the Console, in a script a command is not executed when we press "Enter" or "Return". Instead we have place our cursor in the line we want to execute and then click "Run". When we click "Run" the lines is being executed and the cursor moves automatically to the next line, we click "Run" again and so on. Every time we click "Run" we can see the outcome in our Console, as well as in the Environment. Notice that our script also contains lines starting with **"#", these are comment lines** that I include in my code to make it easier to read and understand. The use of "#" and comments is highly advisable and considered as **a good practice*. You should spend some time now to visually explore the screen in front you. Familiarise yourself with the different windows and click on different tabs to see what kind of information they contain. Also do not forget to save our script giving it a meaningful name. I suggest something like "the most amazing script". You can save it by clicking File >> Save, and then type a name of your preference. Once you do that you should be able to see the new scripts in the "Files" window too.  
+Now that you have typed all that nothing seems to be happening. This is because contrary to the Console, in a script a command is not executed when we press "Enter" or "Return". Instead we have place our cursor in the line we want to execute and then click "Run". When we click "Run" the lines is being executed and the cursor moves automatically to the next line, we click "Run" again and so on. Every time we click "Run" we can see the outcome in our Console, as well as in the Environment. Notice that our script also contains lines starting with **"#", these are comment lines** that I include in my code to make it easier to read and understand. The use of "#" and comments is highly advisable and considered as **a good practice**. You should spend some time now to visually explore the screen in front you. Familiarise yourself with the different windows and click on different tabs to see what kind of information they contain. Also do not forget to save our script giving it a meaningful name. I suggest something like "the most amazing script". You can save it by clicking File >> Save, and then type a name of your preference. Once you do that you should be able to see the new scripts in the "Files" window too.  
 
-## Exercise
+## Exercise 1
 
-Create a new script and name it "Exercise1". Write the necessary lines of code that can solve the following problem:  
-"The price for one cinema ticket is £10. The price for a large popcorn in £8. The price for one soft drink is £4. We want to calculate the total amount of money we spent if we bought 5 tickets, 3 popcorns and 4 soft drinks". Make sure you create a variable for each of the above costs, as well as one variable for the total. Also, make sure to include detailed comments as the ones in the example above. Once you finish the script run all the commands and discuss the result with your group mates. If you all agree with the answer then report it back to the main channel.
+Create a new **script** and save it as **exercise1**. Within that script we want you to create three variables, **var1**, **var2**, and **var3**. It is important that you spell them correctly as you see them above. We now want you to assign the value of 7 to **var1**. We want **var2** to be equal to three times **var1**. Finally, we want **var3** to be equal to **var1** plus **var2**.
+Looking at your environment or by calling the variables in your script, check the variables values. Submit the answers on Moodle, in the **Module participation section**, specifically in **Check Lab Answers**.
+
+
+## Exercise 2
+
+Create a new **script** and name it **exercise2**. Write the necessary lines of code that can solve the following problem:  
+"The price for one cinema ticket is £10. The price for a large popcorn in £8. The price for one soft drink is £4. We want to calculate the total amount of money we spent if we bought 5 tickets, 3 popcorns and 4 soft drinks". **Make sure you create a variable for each of the above costs, as well as one variable for the total**. Also, make sure to include detailed comments as the ones in the example above. Once you finish the script run all the commands and check the results. Submit the answers on Moodle, in the **Module participation section**, specifically in **Check Lab Answers**.
 
