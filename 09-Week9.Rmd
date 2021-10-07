@@ -3,7 +3,7 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Lab Session 7 {#Week9}
+# Lab Session 7 {#Week18}
 
 ## Learning Objectives
 In this week's session we will be focusing on some "guess work". You will be given a partial script and some graphs. Your task will be to complete the code in order to produce the end-graphs on your own.

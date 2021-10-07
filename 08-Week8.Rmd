@@ -3,7 +3,7 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Lab Session 6 {#Week8}
+# Lab Session 6 {#Week17}
 
 ## Learning Objectives
 In this week's session we will be focusing on working with existing code and fixing mistakes as we go along.
