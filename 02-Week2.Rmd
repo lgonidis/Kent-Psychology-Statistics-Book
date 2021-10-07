@@ -22,10 +22,10 @@ By the end of this Lab session you should have a clear understanding of the foll
     
 ## Getting Things Ready   
    
-Ideally, we would like you to have your SP300 work organised. This will make your work easier to maintain but also help us to aid you when you get stuck. Therefore, we recommend creating a folder on your desktop called "SP300". Inside that folder you should be creating a new project every week with week's name. This will make it much easier for you to navigate back and forth from week to week and look at different aspects of your work. Before you proceed with the following steps make sure you have created a folder named "SP300" on your "Desktop" folder.  
+Ideally, we would like you to have your PSYC3000 work organised. This will make your work easier to maintain but also help us to aid you when you get stuck. Therefore, we recommend creating a folder on your desktop called "PSYC3000". Inside that folder you should be creating a new project every week with week's name. This will make it much easier for you to navigate back and forth from week to week and look at different aspects of your work. Before you proceed with the following steps make sure you have created a folder named "PSYC3000" on your "Desktop" folder.  
     
 ## Starting with RStudio  
-Run RStudio and create a new project by clicking on File >> New Project ... .Then select New Directory and then New Project. Enter a Directory name. As mentioned above we recommend naming the folder "Week 2" and by clicking Browse make sure you place that folder in your "SP300" folder that you created on your Desktop.Click "Create Project" to finalise creating your new project.  
+Run RStudio and create a new project by clicking on File >> New Project ... .Then select New Directory and then New Project. Enter a Directory name. As mentioned above we recommend naming the folder "Week 2" and by clicking Browse make sure you place that folder in your "PSYC3000" folder that you created on your Desktop.Click "Create Project" to finalise creating your new project.  
 
 You should now be seeing **three main windows**, three **Console**, the **Environment**, and the **Files**. 
   
@@ -43,7 +43,7 @@ Once you have done that you should be able to see the result of the calculation:
 3+2
 ```
 
-So with the above command line we executed a simple calculation, an addition of 3 and 2. The symbol **+** is called an **operator**. R accepts a number of operators, for more information on operators see: https://www.datamentor.io/r-programming/operator/ . Most of them are straight forward and you have used them numerous times doing arithmetic calculations. For SP300 we will mostly be using the most common ones.  
+So with the above command line we executed a simple calculation, an addition of 3 and 2. The symbol **+** is called an **operator**. R accepts a number of operators, for more information on operators see: https://www.datamentor.io/r-programming/operator/ . Most of them are straight forward and you have used them numerous times doing arithmetic calculations. For PSYC3000 we will mostly be using the most common ones.  
 Sometimes in programming we might want to carry out a calculation and use the results in many different occasions. We would not want to keep typing in the Console the same and the same operation, especially if it is a rather big expression. In order to save ourselves time and effort we can assign the result of an operation to **variable**. For example type the following in your Console and then hit "Enter":
 ```{r eval=FALSE}
 p <- 3+2
@@ -63,7 +63,7 @@ surface <- p*p
 surface
 ```  
 
-So you see now that R calculated the result of 5x5, then assigned it to a new variable called "surface" and then returned the value of "surface" in the console, 25. We will be using **variables** a lot in our work in SP300 and it is worth noting that a variable is not restricted to numerical content. Other types of data can also be assigned to a variable. For example characters:
+So you see now that R calculated the result of 5x5, then assigned it to a new variable called "surface" and then returned the value of "surface" in the console, 25. We will be using **variables** a lot in our work in PSYC3000 and it is worth noting that a variable is not restricted to numerical content. Other types of data can also be assigned to a variable. For example characters:
 
 ```{r eval=FALSE}
 day <- "Monday"
@@ -93,7 +93,7 @@ hours <- 7
 days <- 25
 
 ## the total salary can be calculated by multiplying all the above
-salary <- hours*hourly
+salary <- hours*hourly*days
 ```
 
 Now that you have typed all that nothing seems to be happening. This is because contrary to the Console, in a script a command is not executed when we press "Enter" or "Return". Instead we have place our cursor in the line we want to execute and then click "Run". When we click "Run" the lines is being executed and the cursor moves automatically to the next line, we click "Run" again and so on. Every time we click "Run" we can see the outcome in our Console, as well as in the Environment. Notice that our script also contains lines starting with **"#", these are comment lines** that I include in my code to make it easier to read and understand. The use of "#" and comments is highly advisable and considered as **a good practice*. You should spend some time now to visually explore the screen in front you. Familiarise yourself with the different windows and click on different tabs to see what kind of information they contain. Also do not forget to save our script giving it a meaningful name. I suggest something like "the most amazing script". You can save it by clicking File >> Save, and then type a name of your preference. Once you do that you should be able to see the new scripts in the "Files" window too.  
