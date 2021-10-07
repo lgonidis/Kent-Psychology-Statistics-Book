@@ -3,7 +3,7 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Lab Session 3 {#Week4}
+# Lab Session 4 {#Week12}
 
 ## What we have learnt so far
 
