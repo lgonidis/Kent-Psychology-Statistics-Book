@@ -20,7 +20,7 @@ fourth-task-labs-are-integrated-with-the-moodle-module-participation-component-1
 fifth-task-let-us-go-back-to-rstudio-again-1
 final-task-let-us-create-our-first-script-1
 and-that-is-all-for-today-1
-Week2
+Week10
 learning-objectives
 getting-things-ready
 starting-with-rstudio
@@ -29,14 +29,14 @@ environment
 files
 scripts
 exercise
-Week3
+Week11
 learning-objectives-1
 vectors
 creating-vectors-with-random-numbers
 frequency-tables-in-r-and-histograms
 exercise-2
 exercise-3
-Week4
+Week12
 what-we-have-learnt-so-far
 learning-objectives-2
 lets-get-started
@@ -69,7 +69,6 @@ exercise-6
 Week8
 learning-objectives-5
 to-start-with
-Week10
 your-assignment-deadline-18122020-noon
 psychological-constructs-in-our-study
 week-10-session
@@ -114,7 +113,6 @@ programming-skills-skills-1
 create-a-new-dataframe-that-will-only-contain-your-4-variables-1
 analysis-needed-for-your-report-1
 wrapping-up-1
-Week11
 your-assignment-deadline-18122020-noon-2
 psychological-constructs-in-our-study-2
 week-11-session
