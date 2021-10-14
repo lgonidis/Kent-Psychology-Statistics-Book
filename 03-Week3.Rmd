@@ -3,12 +3,12 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Lab Session 3 {#Week11}
+# Lab Session 3 (Week 11) {-}
 
 ## Learning Objectives
 
 
-In this week's lab session we will start working on some basic concepts of statistical exploration of data. One of the first steps we take as Psychologists when we want to analyse our data, is first to get a "feel", or gist if you want, of how are data are **distributed**. 
+In this week's lab session we will start working on some basic concepts of statistical exploration of data. One of the first steps we take as Psychologists when we want to analyse our data, is first to get a "feel", or gist if you want, of how are data are **distributed**. Moreover, we will start using **functions** and not just rely on simple mathematical operations. **Functions** are useful collections of commands that can carry out specific tasks without us having to worry about manually calculating figures.
 
 By the end of this Lab session you should have a clear understanding of the following concepts:
 
@@ -19,7 +19,7 @@ By the end of this Lab session you should have a clear understanding of the foll
 * **Creating Frequency Tables using R** 
 * **Creating a basic Histograms using R**
 
-Before we begin, do make sure you start a new project and name it Week 3. If you are running RStudio Cloud do not start a new project, continue working on the same one from last week.
+Before we begin, do make sure you start a new project and name it Week 11. If you are running RStudio Cloud do not start a new project, continue working on the same one from last week.
 
 
 ## Vectors
@@ -82,7 +82,7 @@ You see how powerful and handy vectors can be as they allow us to work with many
 
 ## Creating vectors with random numbers
 
-As we do not have any real data yet, we might want to practice out learning with some made up data sets. That is absolutely fine but it poses a problem. If we want to create a vector with 200 made up values it will take us quite a while to actually type 200 values. Luckily, there is a solution to that. We can use an R **function** to create these numbers automatically. Let us see this in practice with a small example.
+As we do not have any real data yet, we might want to practice out learning with some made up data sets. That is absolutely fine but it poses a problem. If we want to create a vector with 200 made up values it will take us quite a while to actually type 200 values. Luckily, there is a solution to that. We can use an R **function** to create these numbers automatically. Let us see this in practice with a small example. Below we will use a function called **sample.int()**, that can generate random integers for us.
  
 ```{r results='asis'}
 
@@ -115,15 +115,19 @@ numbers <- sample.int(50, 200, replace = TRUE)
 numbers
 
 # Now we will call a new function to help us group our data.
-# First put them in 5 groups. The numbers in c() declare the numbers that define each group.
+# First put them in 5 groups. The numbers in c() declare the numbers # that define each group. Because I generated numbers from 1 to 50
+# I chose to split them in groups of 0-10, 10-20, 20-30, 30-40, # # 40-50
 
 groups <- cut(numbers, breaks = c(0,10,20,30,40,50), right = TRUE)
 
 # Now I can produce my frequency table using another function
+# This function is called summary () and uses an object as argument
+# we will use the object groups that we created just above.
 summary(groups)
 
 
-# We will now use a new function called hist that creates histograms.
+# We will now use a new function called hist that creates  
+# histograms.
 # Note that this function has to work with the original numbers
 # and not with the groups.
 
@@ -148,10 +152,21 @@ Let's discuss the **functions** we used:
 **Learning opportunity** from using random numbers. Run the above code many times, and each time observe the new histogram. Then discuss its **skewness** with your group mates. Does it look as **positively** or **negatively** **skewed**? Keep in mind your friends will have different graphs, so it is best to share your screen and show your histogram.
 
 
-## Exercise 2  
-Empty  
+## Exercise 3 
 
-## Exercise 3
+Create a random set of 200 integers between 1 and 40. Group that data in 8 groups and produce the grouped frequency table. Then produce a histogram using these 8 groups. Spend some time to experiments with the number of bars in the histogram as well as generating new random numbers. This will allow you to become good at judging the **skewness** of a **frequency  distribution**. 
+
+## Exercise 4
+For this exercise you will have to upload your answers on the Moodle Module Participation section.Start a new script and save it as exercise4, in your new script type in the following two lines exactly as you see them, then select both of them with your mouse and run them. Please run them together and not one by one
+
+ 
+```{r results='asis'}
+set.seed(1234)
+observations <- sample.int(100, 500, replace = TRUE)
+```
+
+This should now have created a vector called observations that includes 500 integers from 1 to 200. Using **set.seed()** allowed us to have the exact same numbers for all the students in the class. We will talk more about **set.seed()** in next week's drop-in session. Now create a histogram that will include 10 groups. By observing your histogram go to moodle and answer the relevant questions in the **Moodle Module Participation** section.
 
 
-Create a random set of 200 integers between 1 and 40. Group that data in 8 groups and produce the grouped frequency table. Then produce a histogram using these 8 groups. Spend some time to experiments with the number of bars in the histogram as well as generating new random numbers. This will allow you to become good at judging the **skewness** of a **frequency  distribution**.
+
+
