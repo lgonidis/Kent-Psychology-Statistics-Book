@@ -20,7 +20,6 @@ fourth-task-labs-are-integrated-with-the-moodle-module-participation-component-1
 fifth-task-let-us-go-back-to-rstudio-again-1
 final-task-let-us-create-our-first-script-1
 and-that-is-all-for-today-1
-Week10
 learning-objectives
 getting-things-ready
 starting-with-rstudio
@@ -28,14 +27,14 @@ console
 environment
 files
 scripts
-exercise
-Week11
+exercise-1
+exercise-2
 learning-objectives-1
 vectors
 creating-vectors-with-random-numbers
 frequency-tables-in-r-and-histograms
-exercise-2
 exercise-3
+exercise-4
 Week12
 what-we-have-learnt-so-far
 learning-objectives-2
@@ -54,10 +53,10 @@ range-interquartile-range-median-and-relevant-plots
 exploring-data-using-boxplots
 exploring-data-using-barcharts
 exercises
-exercise-1
+exercise-1-1
 exercise-2-1
 exercise-3-1
-exercise-4
+exercise-4-1
 exercise-5
 Week15
 before-you-proceed-for-this-lab-session
@@ -65,7 +64,7 @@ learning-objectives-4
 load-our-own-data
 working-with-our-data
 creating-a-new-dataset-and-executing-all-correlations-at-once
-exercise-6
+exercise
 Week17
 learning-objectives-5
 to-start-with
@@ -102,5 +101,3 @@ week-11-session
 what-is-reverse-coding
 so-how-do-we-deal-with-this
 computer-programming-anxiety-cpaq-brief-version-1
-exercise-1-1
-exercise-2-2

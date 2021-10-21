@@ -19,7 +19,7 @@ R in its core installation has a number of useful functions. However, these func
 
 
 ## Let's get started
-**If you are working on RStudio Cloud skip to step 1 below**  
+**If you are working on RStudio Cloud skip to step 2 below**  
 
 1. For this lab session you will need to create a new project in RStudio. Run RStudio and create a new project by clicking on File >> New Project ... .Then select New Directory and then New Project. Enter a Directory name. As mentioned in Week 2, we recommend naming the folder by week, so "Week 4" would be ideal. Click Browse and make sure you place that folder in your "SP300" folder that you created on your Desktop.Click "Create Project" to finalise creating your new project.  
 2. Now create a new script from File >> New File >> R Script. Save your new script under the name **Week 4**.
@@ -108,20 +108,21 @@ As we progress through our course we will be using specific packages and functio
 
 Another dataset that comes build-in with R is called **iris**. iris dataset gives the measurements in centimeters of the variables sepal length, sepal width, petal length and petal width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica. The following exercises should be completed in one script and are in practice one exercise. They are broken down to smaller questions to make your work easier, as well as making it easier to refer to the solutions in the end.
 
-**Exercise 2**
+**Exercise 5**
 Create a new script and name it **week 4 iris**. Then type in and execute the right command in order to load the dataset **iris**
 
 
-**Exercise 3**
+**Exercise 6**
 Explore the data.frame called **iris** (you can find it in your **Environment**). You should be able to see that some of the included variables are **Sepal.Length**, **Sepal.Width**, **Petal.Length**, and **Petal.Width**. Write the right code that would create one histogram for each of the above variables. Do spend some time to observe each histogram and think about how the scores are distributed and whether we have **skewed** distributions. (CAUTION: In R upper case and lower case letter do matter, make sure to type them exactly as you see them)
 
 
-**Exercise 4**
+**Exercise 7**
 Type the right code in order to get the **mean** and the **median** for all the above variables.
 
 
-**Exercise 5**
+**Exercise 8**
 Type the right code in order to get the **mode** for all the above variables. (Hint: do not forget the **library** and remember the importance of upper case letters.)
+
 . 
   
 . 
