@@ -119,3 +119,9 @@ week-11-session-3
 what-is-reverse-coding-3
 so-how-do-we-deal-with-this-3
 computer-programming-anxiety-cpaq-brief-version-4
+the-aims-of-todays-session-3
+generate-random-samples
+task-1.-write-the-appropriate-code-to-generate-the-following-normal-distributuions-and-their-histograms
+task-2.-calculating-z-scores
+calculating-percentages-that-are-associated-with-z-scores
+task-3.-answer-the-following-questions-by-writing-the-appropriate-r-code

@@ -1,0 +1,119 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
+# Lab Session Week 26. Normal Distribution (Week 26) {-}
+
+
+## The aims of today's session
+
+The aim of today's session is to help you familiarise yourself with normal and standard normal distribution, and how using R can help you navigate from natural scores x to standard scores z and their associated probabilities.
+
+Today you will practice mainly **four tasks**.  
+
+1. Generate a random sample that follows a normal distribution
+2. Calculate a z score from x scores  
+2. Identifying percentages that lie above or below a z-score  
+3. Using basic mathematical operations to work between two z-scores 
+
+
+
+## Generate random samples
+
+We generally use the function `rnorm()` to generate a sample of random numbers that follow a normal distribution. The syntax for `rnorm()` takes three numbers as input. First, the number of observation we want to generate, second the mean of the normal distribution, and third the standard deviation. You can see an example below where we generate a sample of 100 observations, with a mean of 80 and a standard deviation of 12. We can also choose to create a histogram that will plot our sample. Note that as the numbers are randomly picked we do not always create a *perfect* normal distribution, but as our sample increases we tend to closely approximate it. 
+
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+x <- rnorm(100, 80, 12)
+hist(x)
+```
+
+
+## Task 1. Write the appropriate code to generate the following normal distributuions and their histograms
+
+1. 200 numbers with mean of 100 and standard deviation of 15  
+2. 1000 numbers with mean of 60 and standard deviation of 20  
+3. 500 numbers from a **standard normal distribution**
+
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+### As these numbers are normally generated
+### Your histograms might look different than the solutions
+### The solution is to provide you the code
+
+x <- rnorm(200, 100, 15)
+hist(x)
+
+y <- rnorm(1000, 60, 20)
+hist(y)
+
+### remember the standard normal distribution
+### is just a normal distribution with mean=0 and sd=1
+
+w <- rnorm(500, 0, 1)
+hist(w)
+```
+
+
+## Task 2. Calculating z-scores  
+
+In order to calculate the z-score of a natural x value we use the formula `z=(x-mean)/sd`. We want you to practice this formula within R code and calculate the -scores for the following cases of x values.
+
+
+1. x= 120 from a normal distribution with mean=100, sd=10   
+2. x= 80 from a normal distribution with mean=90, sd=8   
+3. x= 12 from a normal distribution with mean=8, sd=3
+
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+z1 <- (120 - 100)/10
+z1
+
+z2 <- (80 - 90)/8
+z2
+
+z3 <- (12 - 8)/3
+z3
+
+```
+
+
+## Calculating percentages that are associated with z-scores  
+
+One of the uses of the normal distribution allows us to calculate the percentage of our sample or population that lies above or below a given x or z score. During our lecture we demonstrated how we do that either using a given probability table or using an appropriate R function. In today's lab we want you to use exclusively the correct R functions (you can watch the part 2 recording of the lecture). The function that we used was `pnorm()`.
+
+
+
+## Task 3. Answer the following questions by writing the appropriate R code
+
+1. What percentage of our population scored below z = -1.6?   
+2. What percentage of our population scored above z = 1.4?   
+3. What percentage of our population scored above z = -1.2?  
+4. what percentage of our population scored between z-scores of -2 and 1.5?
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+### lower.tail = TRUE will give us the area on the left of our z-score
+p1 <- pnorm(-1.6, 0, 1, lower.tail = TRUE)
+p1*100
+
+### lower.tail = FALSE will give us the area on the right of our z-score
+p2 <- pnorm(1.4, 0, 1, lower.tail = FALSE)
+p2*100
+
+p3 <- pnorm(-1.2, 0, 1, lower.tail = FALSE)
+p3*100
+
+
+p4 <- pnorm(1.5, 0, 1, lower.tail = TRUE)
+p5 <- pnorm(-2, 0, 1, lower.tail = TRUE)
+p6 <- p4 - p5
+p6*100
+```
+
+
+
+
