@@ -3,16 +3,16 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Lab Session 6 {#Week17}
+# Statistics Exercise (Week 16) {-}
 
 ## Learning Objectives
-In this week's session we will be focusing on working with existing code and fixing mistakes as we go along.
-This is a crucial lab session and you should do your best to work on your own. You can very briefly chat with your lab mates but try to ask for minimal help from our teaching assistants, not at all if possible. We will go through the answer tomorrow in the Drop-In session.  
+In this week's stats we will be focusing on working with existing code and fixing mistakes as we go along.
+This is a crucial exercise and you should do your best to work on your own. You can very briefly chat with your peers but try to ask for minimal help, not at all if possible. We will go through the answer tomorrow in the Drop-In session.  
 
 ## To start with 
-First, start RStudio and create a new project. Your project should be named "Week 8 lab"
+First, start RStudio and create a new project. Your project should be named "Week 16 Statistics"
 
-Go on moodle in week 8 in the lab session and download two files.  
+Go on moodle in week 16 in the Statistics session and download two files.  
 1. "many many many errors.csv"   
 2. "many many many errors.R"  
 

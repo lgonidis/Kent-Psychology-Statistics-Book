@@ -3,10 +3,21 @@ output:
   html_document: default
   pdf_document: default
 ---
-# SP300 Project A: Continuing ... {#Week20}
+# Lab Session 8 (Week 17) {-}
 
 
-## Your assignment (Deadline 18/12/2020 noon)
+## The aims of today's session
+
+The aims of today's session are to prepare you for the analysis you will have to do for Project A. For this we will use a dummy datafile, and not the actual Project A datafile. This is because we want you to practice the work and then apply it to Project A.   
+
+Today you will practice mainly **four tasks**.  
+
+1. Calculate the overall score for two questionnaires  
+2. Draw a histogram for each of the two overall scores  
+3. Create a scatterplot for the two overall scores  
+
+
+
 
 You will have to investigate for associations between **Maths Anxiety**, **Testing Anxiety**, and **two other constructs** of your choice from the list below. Which one is entirely up to you. However, make sure you link the four in your introduction so that your hypothesis and rationale behind the study are sound.  
 
@@ -92,7 +103,7 @@ df <- mutate(df, SOC = (SoC_1 + SoC_2 + SoC_3_r)/3)
 Notice that I now used the **SoC_r** item and not the **SoC**. This is crucial so keep that in mind. We need to reverse code an item but also use the new item in the calculation.  
 
 
-Lets see now the rest two sub-scales **CSC** and **SACS**.  For **CSC** we see that items 3 and 4 need to be reverse-coded. We will reverse-code them and calculate the new mean.
+Lets see now the rest two subscales **CSC** and **SACS**.  For **CSC** we see that items 3 and 4 need to be reversed. We will reverse them and calculate the new mean.
 
 ```{r}
 df <- mutate(df, CSC_3_r = 6 - CSC_3) 

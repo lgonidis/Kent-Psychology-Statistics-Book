@@ -5,16 +5,16 @@ date: "09/11/2020"
 output: html_document
 ---
 
-# Lab Session 5 {#Week15}
+# Lab Session 6 (Week 15) {-}
 
 ## Before you proceed for this lab session  
 
 In order to use your lab time more efficiently, make sure you complete the following steps first.  
 1. Open RStudio  
-2. Create a new Project. **File > New Project > New Directory > New Project Then click on Browse and select your Desktop, for Directory Name type in Week 7 Lab. Then click on Create Project.**  
-3. Go on moodle on the SP300 page, in Week 6. In the lab section there are two files, **internet.csv** and **exercisew7.csv**. Download both files and save them or copy them in your **Week 7 Lab** folder that is on your desktop. **IF YOU ARE A MAC USER PLEASE USE CHROME AND NOT SAFARI.**  
-4. If you have done everything right, you should be able to see both files at the mottom right window in your RStudio, if the tab **Files**.  
-5. Create a new script and save it as **week7**. Then type in the following commands and run them.  
+2. Create a new Project. **File > New Project > New Directory > New Project Then click on Browse and select your Desktop, for Directory Name type in Week 15 Lab. Then click on Create Project.**  
+3. Go on moodle on the PSYC3000 page, in Week 15. In the lab section there are two files, **internet.csv** and **exercisew7.csv**. Download both files and save them or copy them in your **Week 15 Lab** folder that is on your desktop. **IF YOU ARE A MAC USER PLEASE USE CHROME AND NOT SAFARI.**  
+4. If you have done everything right, you should be able to see both files at the bottom right window in your RStudio, in the tab **Files**.  
+5. Create a new script and save it as **week15**. Then type in the following commands and run them.  
 
 ```{r eval=FALSE}
 library(tidyverse)
@@ -24,9 +24,7 @@ library(ggpubr)
 
 6. If you get any **warning messages** that is fine.  
 7. If you get an error for a specific package then you probably have not installed it yet. You can install it if you run `install.packages("packagename")` in your console.  
-8. Please check your group membership before coming to the lab.  
-9. If for any reason you cannot see your relevant channel then click **show hidden channels**.  
-10.  If for some reason you cannot join any of the meetings, then restart your Teams application and/or your computer.  
+ 
 
 
 
@@ -35,13 +33,13 @@ library(ggpubr)
 * **load our own data files in RStudio**
 * **Use mutate() function to add new variables in the dataset**  
 * **Create a scatterplot for our variables**
-* **Run correlation analysis to explore associations**
+* **Run correlation analysis in order to explore associations**
 * **Create new dataframes that will only contain the variables we want**
 * **Run multiple correlations in one step**  
 
 
 ## Load our own data  
-If you have already followed the steps above you should already have two data files in your folder. These are **internet.csv** and **exercisew7.csv**. We will execute the following script to load **internet.csv** and also get some useful initial summaries. The **internet.csv** contains data from a sudy that measured participants Internet use. If you have already created the **week7 lab** script above then just continue working from there. If not make sure you add the three lines above that contain the libraries.
+If you have already followed the steps above you should already have two data files in your folder. These are **internet.csv** and **exercisew7.csv**. We will execute the following script to load **internet.csv** and also get some useful initial summaries. The **internet.csv** contains data from a study that measured participants Internet use. If you have already created the **week15 lab** script above then just continue working from there. If not make sure you add the three lines above that contain the libraries.
 
 ```{r eval=FALSE}
 ## load the file internet.csv and assign to a dataframe called df
@@ -74,7 +72,7 @@ We can achieve the above with many different ways, for this term we will focus o
 ## and then type in the calculation we want to do
 ## the mean is nothing else than adding all variables
 ## and then dividing by the number of variables
-## NOTE: you do not have to breat the mutate line in two lines
+## NOTE: you do not have to break the mutate line in two lines
 ## like below, we did that so it fits in the pdf width
 
 df <- mutate(df, 

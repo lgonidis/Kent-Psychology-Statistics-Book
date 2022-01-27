@@ -3,11 +3,11 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Lab Session 4 {#Week14}
+# Lab Session 5 (Week 14) {-}
 
 ## What we have learnt so far
 
-In the previous two weeks (Week 3 and Week 4), we have covered descriptive statistics and we have focused on **measures of central tendency** and **measures of dispersion**, In this week's lab session we will bring everything together and we will also expand our work with skills that will allow us to present the above information visually.
+In the previous two weeks (Week 11 and Week 12), we have covered descriptive statistics and we have focused on **measures of central tendency** and **measures of dispersion**, In this week's lab session we will bring everything together and we will also expand our work with skills that will allow us to present the above information visually.
 
 ## Learning objectives  
 
@@ -21,7 +21,7 @@ In the previous two weeks (Week 3 and Week 4), we have covered descriptive stati
 ## Let's get started
 **If you are working on RStudio Cloud skip to step 1 below**  
 
-1. For this lab session you will need to create a new project in RStudio. Run RStudio and create a new project by clicking on File >> New Project ... .Then select New Directory and then New Project. Enter a Directory name. As mentioned in Week 2, we recommend naming the folder by week, so "Week 6" would be ideal. Click **Browse** and make sure you place that folder in your "SP300" folder that you created on your Desktop.Click "Create Project" to finalise creating your new project.  
+1. For this lab session you will need to create a new project in RStudio. Run RStudio and create a new project by clicking on File >> New Project ... .Then select New Directory and then New Project. Enter a Directory name. As mentioned in Week 2, we recommend naming the folder by week, so "Week 6" would be ideal. Click **Browse** and make sure you place that folder in your "PSYC3000" folder that you created on your Desktop.Click "Create Project" to finalise creating your new project.  
 2. Now create a new script from File >> New File >> R Script. Save your new script under the name **Week 6**.  
 3. Our first step would be to install the package **ggpubr**. This package allows to create customisable plots that we can include in our documents, either assignments or publications. Type the following in your console and press Enter in order to install **tidyverse** and **ggpubr**.   
 

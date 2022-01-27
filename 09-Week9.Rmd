@@ -3,14 +3,14 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Lab Session 7 {#Week18}
+# Lab Session 7 (Week 16) {-}
 
 ## Learning Objectives
-In this week's session we will be focusing on some "guess work". You will be given a partial script and some graphs. Your task will be to complete the code in order to produce the end-graphs on your own.
+In this week's session we will be focusing on some "guess work". You will be given a partial script and some graphs. Your task will be to complete the code in order to produce the end-graphs on your own. These tasks will prepare you for the graphs you will need to create on your own for your report.
   
 
-## To start with. (You need to do the following steps before coming to the lab)
-First, start RStudio and create a new project. Your project should be named "Week 9 lab"
+## To start with. 
+First, start RStudio and create a new project. Your project should be named "Week 16 lab"
 
 Go on moodle in week 9 in the lab session and download two files.  
 1. "week9data.csv"   
