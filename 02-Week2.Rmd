@@ -5,7 +5,7 @@ output:
 ---
 # Lab Session 2 (Week 10) {-}
 
-## Learning Objectives
+## Learning Objectives 
 
 In this week's Lab session we will introduce you to some basic features of R. This will allow you to write your first basic scripts. It should be noted that R is a versatile programming language with numerous features and capabilities. However, we will be focusing on concepts that are directly relevant to us, as Psychologists. Therefore, do not consider this module and coursebook as an exhaustive guide to R, instead treat it as a spotlight that will be shedding light on specific topics and techniques.   
 By the end of this Lab session you should have a clear understanding of the following concepts:  
