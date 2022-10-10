@@ -1,6 +1,6 @@
 --- 
 title: "R and RStudio for Psychologists"
-author: "Lazaros Gonidis"
+author: "Lazaros Gonidis, Laura Hunt, Oliver Herdson"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
