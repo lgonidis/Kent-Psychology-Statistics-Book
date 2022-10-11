@@ -125,3 +125,5 @@ task-1.-write-the-appropriate-code-to-generate-the-following-normal-distributuio
 task-2.-calculating-z-scores
 calculating-percentages-that-are-associated-with-z-scores
 task-3.-answer-the-following-questions-by-writing-the-appropriate-r-code
+section
+lab-session-3-week-11--
