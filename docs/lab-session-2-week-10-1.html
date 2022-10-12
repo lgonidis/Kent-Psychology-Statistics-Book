@@ -410,7 +410,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb9-3"><a href="lab-session-2-week-10-1.html#cb9-3" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">sample.int</span>(<span class="dv">10</span>, <span class="dv">5</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb9-4"><a href="lab-session-2-week-10-1.html#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-5"><a href="lab-session-2-week-10-1.html#cb9-5" aria-hidden="true" tabindex="-1"></a>numbers</span></code></pre></div>
-<p>[1] 6 1 6 1 7</p>
+<p>[1] 4 3 5 2 7</p>
 <p>As mentioned above, I used a function called <strong><span style="color: Orange;">sample.int()</span></strong>. A <strong>function</strong> in R, is a mechanism that can perform a task. In this case our function can select an integer number randomly. A function also includes two brackets (). Within these brackets we can specify our own arguments in order to be clear what we want R to do for us when this function is used.</p>
 <p>Notice the number 10, this <span style="color: Violet;"><strong>argument</strong></span> instructs our function that we want to pick randomly a number between 1 and 10.</p>
 <p>Notice the second number 5, this <span style="color: Violet;"><strong>argument</strong></span> instructs our function to give 5 such numbers from 1 to 10.</p>
@@ -424,14 +424,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb10-3"><a href="lab-session-2-week-10-1.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># See how my arguments have now changed.</span></span>
 <span id="cb10-4"><a href="lab-session-2-week-10-1.html#cb10-4" aria-hidden="true" tabindex="-1"></a>numbers <span class="ot">&lt;-</span> <span class="fu">sample.int</span>(<span class="dv">50</span>, <span class="dv">200</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb10-5"><a href="lab-session-2-week-10-1.html#cb10-5" aria-hidden="true" tabindex="-1"></a>numbers</span></code></pre></div>
-<p>[1] 43 10 12 49 1 11 23 42 37 8 40 50 16 47 23 38 2 43 30 26 25 34 6 37 15
-[26] 23 29 1 15 33 40 42 32 35 25 7 4 17 3 24 20 8 16 24 17 28 26 12 2 33
-[51] 15 16 8 49 21 3 33 23 8 11 35 16 8 20 37 22 36 10 26 49 28 35 7 16 25
-[76] 38 8 2 38 47 50 38 11 48 16 31 9 30 27 47 13 11 34 3 31 6 13 13 50 33
-[101] 48 12 16 38 47 16 49 25 42 44 12 31 25 30 18 11 49 11 42 21 34 7 4 25 36
-[126] 47 49 14 46 9 19 32 13 2 34 48 32 21 15 31 6 36 38 19 37 33 8 43 11 36
-[151] 37 8 28 3 31 7 45 18 10 46 38 35 6 35 21 29 37 28 7 37 46 19 26 26 50
-[176] 12 24 33 22 25 43 41 28 7 6 31 15 2 16 26 19 50 30 21 41 24 34 1 19 10</p>
+<p>[1] 39 32 48 5 49 30 11 17 43 27 32 43 30 30 40 14 30 38 10 9 34 11 1 21 10
+[26] 4 7 41 25 45 17 47 32 3 31 3 38 40 6 42 14 1 10 8 29 37 37 19 9 1
+[51] 28 28 36 14 41 41 23 49 21 4 1 11 1 7 15 16 34 43 13 33 3 10 35 42 38
+[76] 46 16 10 27 22 16 8 18 41 24 19 44 27 12 12 13 8 7 43 14 15 20 24 11 20
+[101] 43 16 39 9 31 48 9 48 32 33 30 11 50 5 44 13 13 49 35 48 8 25 15 20 21
+[126] 24 6 42 48 1 41 49 17 10 4 11 3 49 18 15 44 6 25 28 46 26 44 28 50 20
+[151] 22 5 8 34 26 5 21 15 46 42 34 10 23 18 24 12 47 48 15 34 22 45 45 23 5
+[176] 49 10 12 44 7 31 9 7 16 19 18 50 43 40 33 20 46 34 28 30 35 36 23 5 6</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="lab-session-2-week-10-1.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Now we will call a new function to help us group our data.</span></span>
 <span id="cb11-2"><a href="lab-session-2-week-10-1.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># First put them in 5 groups. The numbers in c() declare the numbers # that define each group. Because I generated numbers from 1 to 50</span></span>
 <span id="cb11-3"><a href="lab-session-2-week-10-1.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># I chose to split them in groups of 0-10, 10-20, 20-30, 30-40, # # 40-50</span></span>
@@ -443,7 +443,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb11-9"><a href="lab-session-2-week-10-1.html#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># we will use the object groups that we created just above.</span></span>
 <span id="cb11-10"><a href="lab-session-2-week-10-1.html#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(groups)</span></code></pre></div>
 <p>(0,10] (10,20] (20,30] (30,40] (40,50]
-39 42 40 45 34</p>
+46 44 35 31 44</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="lab-session-2-week-10-1.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We will now use a new function called hist that creates  </span></span>
 <span id="cb12-2"><a href="lab-session-2-week-10-1.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># histograms.</span></span>
 <span id="cb12-3"><a href="lab-session-2-week-10-1.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that this function has to work with the original numbers</span></span>
