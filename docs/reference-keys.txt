@@ -127,3 +127,8 @@ calculating-percentages-that-are-associated-with-z-scores
 task-3.-answer-the-following-questions-by-writing-the-appropriate-r-code
 section
 lab-session-3-week-11--
+lab-stats-session-1-introduction-week9
+first-task-create-your-psyc3000-folder
+exercise-1-creating-vectors-with-random-numbers
+exercise-2-frequency-tables-in-r-and-histograms
+exercise-3style-color180-60-140
