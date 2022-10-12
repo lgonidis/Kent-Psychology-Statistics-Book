@@ -1,17 +1,17 @@
 ---
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 editor_options: 
   markdown: 
     wrap: 72
 ---
 
-# [Lab Session 3 (Week 11)]{style="color: rgb(61, 180, 200);"} {.unnumbered}
+# [Lab Session 3 (Week 11)]{style="color: rgb(61, 100, 200);"} {.unnumbered}
 
 ## [What we have learnt so far]{style="color: rgb(61, 180, 140);"}
 
-In the previous two labs (Week 10 and Week 11) we learnt about variables, vectors, and operators. Furthermore, we were introduced to the uses of functions and their arguments. These were the fundamental steps that we had to take before we can start carrying out statistical tasks. In the last lab session, we began exploring some basic statistical tasks such as creating grouped frequency tables and histograms. These steps, even though simple, allowed us to develop a sense of our data. Creating visual representations of our data is one of R's strongest aspects. For the time being we only practiced with **[hist()]{style="color: Orange;"}** and **[pie()]{style="color: Orange;"}**, however as we become more confident with R we will also explore some additional features that R **packages** can give us.
+In the previous two labs (Week 9 and Week 10) we learnt about variables, vectors, and operators. Furthermore, we were introduced to the uses of functions and their arguments. These were the fundamental steps that we had to take before we can start carrying out statistical tasks. In the last lab session, we began exploring some basic statistical tasks such as creating grouped frequency tables and histograms. These steps, even though simple, allowed us to develop a sense of our data. Creating visual representations of our data is one of R's strongest aspects. For the time being we have only practiced with **[hist()]{style="color: Orange;"}** and **[pie()]{style="color: Orange;"}**, however as we become more confident with R we will also explore some additional features that R **packages** can give us.
 
 R in its core installation has a number of useful functions. However, these functions do not cover all the possible tasks we would wish to perform. In order to overcome this weakness, R allows us to install and use additional **packages**. These packages are more specialised than the core R and can provide us with numerous new statistical tools. Today, we will learn how to install and use such packages and see how they can provide us with useful new features. We will also see a number of examples of how to use R to acquire the **mean, median**, and **mode** of a sample. **Finally, in order to make things more interesting we will use some experimental data that R offers by default. So today, we will not be generating datasets comprised of random data.** Instead we will be using some of the built-in datasets.
 
@@ -85,7 +85,7 @@ In order to have a function that can find the mode of our sample we need to inst
 library(DescTools)
 ```
 
-As a good practice we tend to declare the packages we want to use at the top of our scripts. We also need to include the command **[library(DescTools)]{style="color: Orange;"}** only once per script, if we need it at all. Now we have the necessary function to find the **mode** of **len** by calling the function **[Mode()]{style="color: Orange;"}** that comes with the package **[DescTools]{style="color: dodgerblue;"}**. Add the following command and run it to get the mode.
+As a good practice we tend to declare the packages we want to use at the top of our scripts. We also need to include the command **[library(DescTools)]{style="color: Orange;"}** only once per script, if we need it at all. Now we have the necessary function to find the **mode** of **len** by calling the function **[Mode()]{style="color: Orange;"}** that comes with the package **[DescTools]{style="color: dodgerblue;"}**. Add the following command and run it to get the mode (**note** that the command in the **[DescTools]{style="color: dodgerblue;"}** package - '**[Mode()]{style="color: Orange;"}**' - has a capital letter!).
 
 ```{r eval=FALSE}
 library(DescTools)
