@@ -132,3 +132,9 @@ first-task-create-your-psyc3000-folder
 exercise-1-creating-vectors-with-random-numbers
 exercise-2-frequency-tables-in-r-and-histograms
 exercise-3style-color180-60-140
+solutions-spoiler-alert-1
+exercise-1-2
+exercise-2-2
+exercise-3-2
+exercise-4-2
+exercise-5-1
