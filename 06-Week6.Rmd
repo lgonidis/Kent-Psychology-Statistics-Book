@@ -10,7 +10,7 @@ editor_options:
 
 ## [What we have learnt so far]{style="color: rgb(61, 180, 140);"}
 
-In the previous two weeks (Week 11 and Week 12), we have covered descriptive statistics, focusing on **measures of central tendency** and **measures of dispersion**. In this week's lab session we will bring everything together and we will also expand our work with skills that will allow us to present the above information visually.
+Over this last week and the previous week (Week 11 and Week 12), we have covered descriptive statistics, focusing on **measures of central tendency** and **measures of dispersion**. In this week's lab session we will bring everything together and we will also expand our work with skills that will allow us to present the above information visually.
 
 ## [Learning objectives]{style="color: rgb(61, 180, 140);"}  
 
@@ -23,7 +23,7 @@ In the previous two weeks (Week 11 and Week 12), we have covered descriptive sta
 
 ## [Let's get started]{style="color: rgb(61, 180, 140);"}
 
-**If you are working on RStudio Cloud skip to step 1 below**  
+**If you are working on RStudio Cloud skip to step 2 below**  
 
 1. For this lab session you will need to create a new project in RStudio. Run RStudio and create a new project by clicking on File >> New Project ... .Then select New Directory and then New Project. Enter a Directory name. As mentioned in previous weeks, we recommend naming the folder by week, so "Week 12" would be ideal. Click **Browse** and make sure you place that folder in your "PSYC3000" folder that you created on your Desktop (if you have moved your work onto the z drive, then make sure to save your project there instead). Click "Create Project" to finalise creating your new project.  
 2. Now create a new script from File >> New File >> R Script. Save your new script under the name **Week 12**.  
@@ -53,9 +53,9 @@ library(ggpubr)
 data("ToothGrowth")
 ```
 
-This informs R that we want to work with the package **[ggpubr]{style="color: dodgerblue;"}** and the built-in dataset called "**[ToothGrowth]{style="color:Firebrick;"}**". If you have a look at your Environment, under the section called **Data**, you will find an object called **[ToothGrowth]{style="color:Firebrick;"}**. You will also see some additional information, it has 60 observations and 3 variables. If you also move your mouse pointer on top of **[ToothGrowth]{style="color:Firebrick;"}** and leave it there you will get a tooltip window informing you that this is a **data.frame**. For now, you can consider a data.frame as a table that contains information for more than one variables. If you click once on **[ToothGrowth]{style="color:Firebrick;"}** then RStudio will open and display this data.frame for you. You can see it in a new tab that opened next to your script. You can see it has three columns, one per variable. The top row includes the variable names. **[len]{style="color:darkcyan;"}** is the variable that contains information on the tooth growth, **[supp]{style="color:darkcyan;"}** is the variable that contains information on the vitamin supplement used, and **[dose]{style="color:darkcyan;"}** is the variable that describes the dosage that was administered. 
+This informs R that we want to work with the packages **[tidyverse]{style="color: dodgerblue;"}** and  **[ggpubr]{style="color: dodgerblue;"}** and the built-in dataset called "**[ToothGrowth]{style="color:Firebrick;"}**". If you have a look at your Environment, under the section called **Data**, you will find an object called **[ToothGrowth]{style="color:Firebrick;"}**. You will also see some additional information, it has 60 observations and 3 variables. If you also move your mouse pointer on top of **[ToothGrowth]{style="color:Firebrick;"}** and leave it there you will get a tooltip window informing you that this is a **data.frame**. For now, you can consider a data.frame as a table that contains information for more than one variable. If you click once on **[ToothGrowth]{style="color:Firebrick;"}** then RStudio will open and display this data.frame for you. You can see it in a new tab that opened next to your script. You can see it has three columns, one per variable. The top row includes the variable names. **[len]{style="color:darkcyan;"}** is the variable that contains information on the tooth growth, **[supp]{style="color:darkcyan;"}** is the variable that contains information on the vitamin supplement used, and **[dose]{style="color:darkcyan;"}** is the variable that describes the dosage that was administered. 
 
-If you type and run each of the following commands one at a time you will see each variable displayed in your console. This is pretty similar to what we did in **Week 3**.
+If you type and run each of the following commands one at a time you will see each variable displayed in your console. This is pretty similar to what we did in **Week 11**.
 
 ```{r collapse=TRUE}
 ToothGrowth$len
@@ -71,7 +71,7 @@ We will now start using our newly acquired knowledge of **measures of dispersion
 summary(ToothGrowth)
 ```
 
-You can see that the **[summary()]{style="color: dodgerblue;"}** functions returns the min, max, mean, median, Q1 and Q3 with just one execution. However, there are also some differences. Our variable **[len]{style="color:darkcyan;"}** is a numerical variable and that is why we get all this information. Where as our variable **[supp]{style="color:darkcyan;"}** is a factor with 2 levels and we only get a summary of how many cases we have in each level of the variable. In this case we see 30 for OJ and 30 for VC. As it was mentioned in the methods lecture of week 11, some variables are measurement variables whereas others can be manipulated variables. The variables we manipulate are known as **Independent Variables** (**IV**). When we manipulate variables then the measurement variables are our **Dependent Variables** or **DV**.
+You can see that the **[summary()]{style="color: dodgerblue;"}** function returns the min, max, mean, median, Q1 and Q3 with just one execution. However, there are also some differences. Our variable **[len]{style="color:darkcyan;"}** is a numerical variable and that is why we get all this information. Where as our variable **[supp]{style="color:darkcyan;"}** is a factor with 2 levels and we only get a summary of how many cases we have in each level of the variable. In this case we see 30 for OJ and 30 for VC. As it was mentioned in the methods lecture of week 11, some variables are measurement variables whereas others can be manipulated variables. The variables we manipulate are known as **Independent Variables** (**IV**). When we manipulate variables then the measurement variables are our **Dependent Variables** or **DV**.
 
 Manipulated variables have to have at least two levels. For example the **[supp]{style="color:darkcyan;"}** variable is a variable that we manipulated where we assigned **participants** randomly to one of the two conditions, **levels**. These two levels were VC and OJ. Similarly, **[dose]{style="color:darkcyan;"}** is also a variable we manipulated and it has three levels, **0.5**, **1.0**, and **2.0**.   
 
@@ -88,7 +88,7 @@ With the above code we informed R that the variable **[dose]{style="color:darkcy
 summary(ToothGrowth)
 ```
 
-You see now that we no longer get any numerical descriptive results. We only get a count of how many cases are in each level of the factor. This means that now R has properly identified our IVs. **When you work with data make sure your first step is to always check the variable and assign factors to your IVS**. Since **[len]{style="color:darkcyan;"}** is our only DV then we will focus on this one for our descriptives today. The following functions are self-explanatory, make sure to also add some comments in your code so that you can refer back to your script at later times.
+You see now that we no longer get any numerical descriptive results. We only get a count of how many cases are in each level of the factor. This means that now R has properly identified our IVs. **When you work with data make sure your first step is to always check the variable and assign factors to your IVs**. Since **[len]{style="color:darkcyan;"}** is our only DV then we will focus on this one for our descriptives today. The following functions are self-explanatory, make sure to also add some comments in your code so that you can refer back to your script at later times.
 
 ```{r collapse = TRUE}
 
@@ -110,7 +110,7 @@ library(ggpubr) ### do not type this line if you already included at the top of 
 ggboxplot(ToothGrowth$len)
 ```
 
-As you can see the boxplot is comprised of a **box** and two **lines**. The lower point of the line represents the min and the higher point represents the max. The horizontal line inside the box represents the median, and the lower and upper sides of the box represent the Q1 and Q3 respectively. Boxplots are even more informative if we use them to plot different variables, or create different boxplot per level of a factor. For example: 
+As you can see the boxplot is comprised of a **box** and two **lines**. The lower point of the line represents the min and the higher point represents the max. The horizontal line inside the box represents the median, and the lower and upper sides of the box represent the Q1 and Q3 respectively. Boxplots are even more informative if we use them to plot different variables, or create different boxplots per level of a factor. For example: 
 
 ```{r}
 ggboxplot(ToothGrowth, x="dose", y = "len")
@@ -181,11 +181,13 @@ ggbarplot(ToothGrowth, x="dose", y = "len", fill = "supp",
           position = position_dodge(0.7) , add = "mean_sd")
 ```
 
-Both **[ggboxplot]**{style="color: dodgerblue;"} and **[ggbarplot]{style="color: dodgerblue;"}** come numerous more **arguments**. If you ever want to see a breakdown of a given function (including what arguments you can use), you can use the **[help]{style="color: dodgerblue;"}** function (see below) or google them to see what other options you have. We will also be using them a lot in the coming weeks so we will learn quite a few more arguments.
+Both **[ggboxplot]{style="color: dodgerblue;"}** and **[ggbarplot]{style="color: dodgerblue;"}** come with numerous more **arguments**. If you ever want to see a breakdown of a given function (including what arguments you can use), you can use the **[help]{style="color: dodgerblue;"}** function (see below) or google them to see what other options you have. We will also be using them a lot in the coming weeks so we will learn quite a few more arguments.
 
 e.g.,
+```{r eval=FALSE}
+help(ggbarplot)
+```
 
-**[help(ggbarplot)]{style="color: dodgerblue;"}**
 
 ## **[Exercises]{style="color: rgb(180, 60, 140);"}**
 
@@ -222,62 +224,5 @@ ggbarplot(mtcars, x = "cyl", y = "mpg", color = "cyl", position = position_dodge
     
 ### [Exercise 5]{style="color: rgb(180, 60, 140);"}
 ```{r echo=FALSE}
-ggbarplot(mtcars, x = "cyl", y = "wt", fill = "am", position = position_dodge(0.5), add = "mean_sd")
-```
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-.
-
-## [Solutions: SPOILER ALERT]{style="color: rgb(61, 180, 140);"}
-### [Exercise 1]{style="color: rgb(180, 60, 140);"}
-
-```{r eval=FALSE}
-library(ggpubr)
-data(mtcars)
-
-mtcars$cyl <- as.factor(mtcars$cyl)
-mtcars$am <- as.factor(mtcars$am)
-
-ggboxplot(mtcars, x = "cyl", y = "disp")
-
-```
-   
-### [Exercise 2]{style="color: rgb(180, 60, 140);"}
-```{r eval=FALSE}
-ggboxplot(mtcars, x = "cyl", y = "mpg", fill = "am")
-```
-   
-### [Exercise 3]{style="color: rgb(180, 60, 140);"}
-
-```{r eval=FALSE}
-ggbarplot(mtcars, x = "am", y = "mpg", fill = "cyl", position = position_dodge(1), add = "mean_sd")
-```
-    
-### [Exercise 4]{style="color: rgb(180, 60, 140);"}
-```{r eval=FALSE}
-ggbarplot(mtcars, x = "cyl", y = "mpg", color = "cyl", position = position_dodge(1), add = "mean")
-```
-    
-### [Exercise 5]{style="color: rgb(180, 60, 140);"}
-```{r eval=FALSE}
 ggbarplot(mtcars, x = "cyl", y = "wt", fill = "am", position = position_dodge(0.5), add = "mean_sd")
 ```

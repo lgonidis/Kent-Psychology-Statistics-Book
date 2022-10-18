@@ -138,3 +138,4 @@ exercise-2-2
 exercise-3-2
 exercise-4-2
 exercise-5-1
+solutions-for-stats-lab-4-week-12-spoiler-alert
