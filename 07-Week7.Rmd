@@ -2,19 +2,26 @@
 title: ''
 author: "Lazaros Gonidis"
 date: "09/11/2020"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
-# Lab Session 6 (Week 15) {-}
+# [Lab Session 5 (Week 14)]{style="color: rgb(61, 100, 200);"} {-}
 
-## Before you proceed for this lab session  
+## [Before you proceed for this lab session]{style="color: rgb(61, 180, 140);"}  
 
-In order to use your lab time more efficiently, make sure you complete the following steps first.  
-1. Open RStudio  
-2. Create a new Project. **File > New Project > New Directory > New Project Then click on Browse and select your Desktop, for Directory Name type in Week 15 Lab. Then click on Create Project.**  
-3. Go on moodle on the PSYC3000 page, in Week 15. In the lab section there are two files, **internet.csv** and **exercisew7.csv**. Download both files and save them or copy them in your **Week 15 Lab** folder that is on your desktop. **IF YOU ARE A MAC USER PLEASE USE CHROME AND NOT SAFARI.**  
+**Before we get started -** in order to use your lab time more efficiently, make sure you complete the following steps first:  
+
+1. Open RStudio 
+
+2. Create a new Project. **File > New Project > New Directory > New Project**. Then, click on **Browse** and select your **Desktop**, then for **Directory Name** type in 'Week 14 Lab'. Then click on Create Project.  
+
+3. On moodle, on the PSYC3000 page, go to Week 14. In the lab section there are two files, **[internet.csv]{style="color: firebrick;"}** and **[exercisew7.csv]{style="color: firebrick;"}**. Download both files and save them or copy them in your **Week 14 Lab** folder that is on your desktop. **IF YOU ARE A MAC USER PLEASE USE CHROME AND NOT SAFARI.**  
+
 4. If you have done everything right, you should be able to see both files at the bottom right window in your RStudio, in the tab **Files**.  
-5. Create a new script and save it as **week15**. Then type in the following commands and run them.  
+
+5. Create a new script and save it as **week14**. Then type in the following commands and run them in order to load the **[tidyverse]{style="color:dodgerblue;"}**, **[correlation]{style="color:dodgerblue;"}**, and **[ggpubr]{style="color:dodgerblue;"}** packages.  
 
 ```{r eval=FALSE}
 library(tidyverse)
@@ -22,24 +29,25 @@ library(correlation)
 library(ggpubr)
 ```
 
-6. If you get any **warning messages** that is fine.  
-7. If you get an error for a specific package then you probably have not installed it yet. You can install it if you run `install.packages("packagename")` in your console.  
+6. If you get any **warning messages** that is fine. 
+
+7. If you get an error for a specific package, then you probably have not installed it yet. You can install it using the **[install.packages()]{style="color:orange;"}** function by running `install.packages("packagename")` in your console.  
  
 
 
+## [Learning objectives]{style="color: rgb(61, 180, 140);"}  
 
-## Learning objectives  
-
-* **load our own data files in RStudio**
-* **Use mutate() function to add new variables in the dataset**  
+* **Load our own data files in RStudio**
+* **Use the [mutate()]{style="color: Orange;"} function to add new variables into the dataset**  
 * **Create a scatterplot for our variables**
 * **Run correlation analysis in order to explore associations**
 * **Create new dataframes that will only contain the variables we want**
 * **Run multiple correlations in one step**  
 
 
-## Load our own data  
-If you have already followed the steps above you should already have two data files in your folder. These are **internet.csv** and **exercisew7.csv**. We will execute the following script to load **internet.csv** and also get some useful initial summaries. The **internet.csv** contains data from a study that measured participants Internet use. If you have already created the **week15 lab** script above then just continue working from there. If not make sure you add the three lines above that contain the libraries.
+## [Load our own data]{style="color: rgb(61,180,140);"} 
+
+If you have followed the steps above, you should already have two data files in your folder. These are **[internet.csv]{style="color:Firebrick;"}** and **[exercisew7.csv]{style="color:Firebrick;"}**. We will execute the following script to load **[internet.csv]{style="color:Firebrick;"}** and also get some useful initial summaries. The **[internet.csv]{style="color:Firebrick;"}** contains data from a study that measured participants Internet use. If you have already created the **week14 lab** script above then just continue working from there. If not make sure you add the three lines above that contain the libraries.
 
 ```{r eval=FALSE}
 ## load the file internet.csv and assign to a dataframe called df
@@ -52,18 +60,30 @@ summary(df)
 ```
 
 
-## Working with our data  
+## [Working with our data]{style="color: rgb(61,180,140);"}  
 
-The variable id corresponds to participant id, the variable gender and age as self-explanatory. The variables **use1** to **use6** represent 6 questions with regards to the use of internet. The variables **pre1** to **pre6** represent 6 questions with regards to how preoccupied with thoughts about Internet someone is. The variables **comfort1** and **comfort2** are two questions with regards to how comforting someone finds the Internet to be. **Days** and **hours** represent how many days a week and how many hours a day someone spends on the Internet.  
+The [id]{style="color:darkcyan;"} variable corresponds to participant id, the variable [gender]{style="color:darkcyan;"} and [age]{style="color:darkcyan;"} are self-explanatory. The variables **[use1]{style="color:darkcyan;"}** to **[use6]{style="color:darkcyan;"}** represent 6 questions with regards to the use of internet. The variables **[pre1]{style="color:darkcyan;"}** to **[pre6]{style="color:darkcyan;"}** represent 6 questions with regards to how preoccupied with thoughts about Internet someone is. The variables **[comfort1]{style="color:darkcyan;"}** and **[comfort2]{style="color:darkcyan;"}** are two questions regarding how comforting someone finds the Internet to be. **[Days]{style="color:darkcyan;"}** and **[hours]{style="color:darkcyan;"}** represent how many days a week and how many hours a day someone spends on the Internet.  
 
 
-Even though we could run correlation analysis for each question this is not meaningful, in this case. What we want to do is calculate three new variables. One variable that would be the average use of internet (mean of use1 to use6), one variable that would be average preoccupation (mean of pre1 to pre6), and one variable that would be the average of comforting, mean of comfort1 and comfort2. So in reality we want to add three new columns to our dataframe that will include the results of the above three calculations.  
+Even though we could run correlation analysis for each question, this is not particularly meaningful or helpful in this case. **What we want to do is calculate three new variables:** 
 
-**use_mean**: mean of use1 to use6 for each participant
-**pre_mean**: mean of pre1 to pre6 for each participant  
-**comf_mean**: mean of comfort1 and comfort2 for each participant. 
-**total_hr**: the total amount of hours in a week 
-We can achieve the above with many different ways, for this term we will focus on using the function **mutate()**. 
+- One variable that will be the average use of internet (mean of **[use1]{style="color:darkcyan;"}** to **[use6]{style="color:darkcyan;"})** 
+
+- One variable that would be average preoccupation (mean of **[pre1]{style="color:darkcyan;"}** to **[pre6]{style="color:darkcyan;"})** 
+
+- One variable that would be the average of comforting, mean of **[comfort1]{style="color:darkcyan;"}** and **[comfort2]{style="color:darkcyan;"}**. 
+
+So, in reality we want to add three new columns to our dataframe that will include the results of the following three calculations:  
+
+- **[use_mean]{style="color:darkcyan;"}**: mean of use1 to use6 for each participant
+
+- **[pre_mean]{style="color:darkcyan;"}**: mean of pre1 to pre6 for each participant  
+
+- **[comf_mean]{style="color:darkcyan;"}**: mean of comfort1 and comfort2 for each participant. 
+
+- **[total_hr]{style="color:darkcyan;"}**: the total amount of hours in a week 
+
+We can achieve the above with many different ways, for this term we will focus on using the function **[mutate()]{style="color:orange;"}**. 
 
 ```{r eval=FALSE}
 
@@ -87,14 +107,15 @@ df <- mutate(df,
              comf_mean = (comfort1 + comfort2)/2)
 
 ## we can also do any other type of arithmetic calculation
-## for example total_hr = days * hours
+## for example: total_hr = days * hours
 df <- mutate(df, 
              total_hr = days*hours)
 
 ```
 
 
-We can now create  simple scatterplots between between our newly created variables. Below, we only give you only one example but try to complete the rest on your own.  We can also carry out a correlation analysis between two variables. Again, we give you only one example, you should do the rest on your own during the lab session.
+We can now create simple scatterplots between between our newly created variables using **[ggscatter()]{style="color:orange;"}**. Below, we have given you one example for creating your scatterplots, try to complete the rest on your own. We can also carry out a correlation analysis between two variables using **[correlation()]{style="color:orange;"}**. Again, we give you only one example, you should do the rest on your own during the lab session. 
+
 
 ```{r eval=FALSE}
 ## a simple scatterplot between use_mean and pre_mean
@@ -109,12 +130,15 @@ cor_test(data = df,
 ```
 
 
-## Creating a new dataset and executing all correlations at once
+## [Creating a new dataset and executing all correlations at once]{style="color:rgb(61,180,140);"}
 
-As you have seen above it is quite a lot of work to keep typing the same code for each pair of variables. One way to overcome this is to use the function, correlation(). This function, takes as an input our entire dataframe and runs correlations for all the existing variables. The problem with this approach is that our dataframe may also have variables that we do not want to include. An easy way to fix this would be to create a new dataframe that only contains the variables we need. Then run correlation on the new dataframe. We can do that by using the function select() and declare the variables we want to copy to the new dataframe.
+As you have seen above, it is quite a lot of work to keep typing the same code for each pair of variables. One way to overcome this is to use the function, **[correlation()]{style="color:orange;"}**. This function takes  our entire dataframe as its input and runs correlations for **all** the existing variables. The problem with this approach is that our dataframe may also have variables that we do not want to include. An easy way to fix this would be to create a new dataframe that only contains the variables we need. We can then run our correlation on the new dataframe. We can do that by using the function **[select()]{style="color:orange;"}** and declare the variables we want to copy to the new dataframe.
+
+As you should recall, when we loading in our original data, we assigned it to a dataframe and called it **[df]{style="color:firebrick;"}**. So, we now want to create a new dataframe and call it something else, such as **[df2]{style="color:firebrick;"}**.
 
 ```{r eval=FALSE}
-## first we declate that our dataframe is df
+## When using the select() function, 
+##we first declare that the dataframe we want is df
 ## then we declare the variables we want to copy over
 ## to the new dataframe which we can give any name we want.
 df2 <- select(df, use_mean, pre_mean, comf_mean, total_hr)
@@ -122,7 +146,7 @@ df2 <- select(df, use_mean, pre_mean, comf_mean, total_hr)
 summary(df2)
 ```
 
-Running the above code would create a new dataframe called **df2*. We can now run all the correlations between our four variables.  
+Running the above code would create a new dataframe called **[df2]{style="color:firebrick;"}**. We can now use **[correlation()]{style="color:orange;"}** to run all the correlations between our four variables.  
 
 ```{r eval=FALSE}
 ## all we have to do is declare the dataframe name
@@ -131,20 +155,23 @@ Running the above code would create a new dataframe called **df2*. We can now ru
 correlation(data = df2, method = "pearson")
 ```
 
-If you observe the output you will see that we have a row for each pair of variables. 
+If you observe the output, you will see that we have a row for each pair of variables. 
 
-## Exercise
+## [Exercise]{style="color:rgb(180, 60, 140);"}
 
-Create the appropriate script that would allow  you to load the datafile **exercisew7.csv**. This file contains the following columns:
-att1,att2,att3,bel1,bel2,bel3,bel4,stance1,stance2,stance3,stance4,ethic1,ethic2,ethic3. You should create new variables that would be the average of the following:  
+Create a new script in your week 14 project. Then, write the appropriate code that would allow you to load the datafile **[exercisew7.csv]{style="color:Firebrick;"}**. This file contains the following columns:
+[att1, att2, att3, bel1, bel2, bel3, bel4, stance1, stance2, stance3, stance4, ethic1, ethic2, ethic3]{style="color:darkcyan;"}. You should create new variables that would be the average of the following:  
 
-1. att_mean: att1, att2, att3  
-2. bel_mean: bel1, bel2, bel3, bel4
-3. stance_mean: stance1,stance2,stance3,stance4  
-4. ethic_mean: ethic1, ethic2, ethic3  
+1. **[att_mean]{style="color:darkcyan;"}**: att1, att2, att3  
+2. **[bel_mean]{style="color:darkcyan;"}**: bel1, bel2, bel3, bel4
+3. **[stance_mean]{style="color:darkcyan;"}**: stance1,stance2,stance3,stance4  
+4. **[ethic_mean]{style="color:darkcyan;"}**: ethic1, ethic2, ethic3  
 
-Then explore correlations by creating scatterplots for the above four variables.  
-Also, create a new datafile that will only include these four variables and run all correlations at once using the new dataframe.
+Using what you have learnt from today's session, complete the following  activities: 
+
+- **[Exercise 1]{style="color:rgb(180, 60, 140);"}:** Explore the correlations between the above four variables by creating scatterplots.
+
+- **[Exercise 2]{style="color:rgb(180,60,140);"}:** Next, create a new datafile that will **only** include these four variables and run **all correlations at once** using the new dataframe.
 
 
 
