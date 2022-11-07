@@ -3,22 +3,36 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Statistics Exercise (Week 16) {-}
+# [Lab Session 6 (Week 15)]{style="color: rgb(61, 100, 200);"} {-}
 
-## Learning Objectives
-In this week's stats we will be focusing on working with existing code and fixing mistakes as we go along.
-This is a crucial exercise and you should do your best to work on your own. You can very briefly chat with your peers but try to ask for minimal help, not at all if possible. We will go through the answer tomorrow in the Drop-In session.  
+## [Learning Objectives]{style="color: rgb(61, 180, 140);"}
+In this week's lab session we will be focusing on working with existing code and **fixing the mistakes** as we go along.
+This is a crucial exercise and you should do your best to **work on your own**. You can very briefly chat with your peers but try to ask for minimal help, and, if possible, complete it independently. **We will go through the answers during next week's R lecture.**      
 
-## To start with 
-First, start RStudio and create a new project. Your project should be named "Week 16 Statistics"
+## [To begin]{style="color: rgb(61, 180, 140);"}
+First, start RStudio and **create a new project**. Your project should be named "Week 15 Statistics"
 
-Go on moodle in week 16 in the Statistics session and download two files.  
+Go on Moodle in week 15 in the Statistics session and **download two files**.  
 1. "many many many errors.csv"   
 2. "many many many errors.R"  
 
-Make sure you save both files in the folder you just created for your new project.  
-Once you have that then load the R script and start working through the instructions that are included in the script as comments.
+Make sure you **save both files in the folder you just created** for your new project.  
+Once you have that, **load the R script** and start working through the instructions that are included in the script as comments.
 In order to load the script go to File > Open File then select the "many many many errors.R" file and click on Open.  
 
-As you work through the file, keep an eye for typing mistakes, packages that we have not loaded, variables that are mistyped, dataframes that are not declared. Also, functions that do not give you an error but do not do what you want if you do not typed them correctly (remember mode vs Mode a few weeks ago).
+As you work through the file, keep an eye out for a range of mistakes, such as:
+
+- Typing mistakes
+
+- Packages that we have not loaded
+
+- Variables that are mistyped 
+
+- Dataframes that are not declared
+
+- Functions that do not give you an error but do not do what you want if you do not typed them correctly (remember mode vs Mode a few weeks ago).
+
+
+
+As we want you to work independently, the ALs will only be able to "nudge you" in the right direction. 
 
