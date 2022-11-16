@@ -13,8 +13,8 @@ In this week's session we will be focusing on some "guess work". You will be giv
 First, start RStudio and create a new project. Your project should be named "Week 16 lab"
 
 Go on moodle in week 9 in the lab session and download two files.  
-1. "week9data.csv"   
-2. "week9script.R"  
+1. "week16_data.csv"   
+2. "week16_script.R"  
 
 Make sure you save both files in the folder you just created for your new project.  
 Once you have that then load the R script and execute **only the first 6 lines**.
@@ -31,7 +31,7 @@ Go through your scripts now and try to complete the missing code in order to get
 library(tidyverse)
 library(ggpubr)
 
-df9 <- read_csv("week9data.csv")
+df9 <- read_csv("week16_data.csv")
 ## end of preparation
 
 
